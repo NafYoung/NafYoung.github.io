@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>双击打开个人网站</title>
+    <style>
+      :root {
+        color: #17332d;
+        background: #f6edd4;
+        font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background:
+          radial-gradient(circle at top left, rgba(255, 255, 255, 0.45), transparent 30%),
+          linear-gradient(180deg, #f9f1d9 0%, #f3e6c4 100%);
+      }
+
+      .card {
+        width: min(560px, calc(100% - 32px));
+        padding: 28px;
+        border-radius: 28px;
+        border: 2px solid #17332d;
+        background: rgba(255, 251, 239, 0.92);
+        box-shadow: 12px 12px 0 rgba(23, 51, 45, 0.12);
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: 28px;
+      }
+
+      p {
+        margin: 0;
+        line-height: 1.8;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 18px;
+      }
+
+      a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 0 18px;
+        border-radius: 999px;
+        border: 2px solid #17332d;
+        background: #f38c4b;
+        color: #fffaf0;
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      a.secondary {
+        background: transparent;
+        color: #17332d;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <h1>个人网站离线版</h1>
+      <p>如果你的浏览器没有自动跳转，直接点击下面的按钮进入双击可看的单文件版本。</p>
+      <div class="actions">
+        <a href="./双击打开版.html">打开网站</a>
+        <a class="secondary" href="./双击打开版.html">备用入口</a>
+      </div>
+    </main>
+    <script>
+      window.location.replace('./双击打开版.html')
+    </script>
+  </body>
+</html>
