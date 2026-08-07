@@ -36,7 +36,9 @@ export const siteContent: SiteContent = {
       title: '内容监测',
       accent: '#5eead4',
       gradient:
-        'radial-gradient(88% 180% at 70% 8%, #1375c8 0%, #0c4a7a 32%, #081a36 68%, #040814 100%)',
+        'radial-gradient(88.89% 182.5% at 69.13% 5.25%, #1375c8 0%, #157acd 28.99%, #0c3560 72.78%, #060c20 100%)',
+      video: '/media/hero1.mp4',
+      poster: '/media/hero1.jpg',
     },
     {
       prompt: '用地图把红色景点串成可探索路线',
@@ -44,6 +46,8 @@ export const siteContent: SiteContent = {
       accent: '#7dd3fc',
       gradient:
         'radial-gradient(90% 170% at 62% 12%, #1d4ed8 0%, #0f3a6b 30%, #0a1f3d 70%, #050b18 100%)',
+      video: '/media/hero2.mp4',
+      poster: '/media/hero2.jpg',
     },
     {
       prompt: '把阅读听力口语写作，收成一个学习台',
@@ -51,6 +55,8 @@ export const siteContent: SiteContent = {
       accent: '#67e8f9',
       gradient:
         'radial-gradient(85% 175% at 75% 5%, #0e7490 0%, #155e75 28%, #0c2744 72%, #060c20 100%)',
+      video: '/media/hero3.mp4',
+      poster: '/media/hero3.jpg',
     },
   ],
   traits: [
@@ -59,30 +65,27 @@ export const siteContent: SiteContent = {
       englishLabel: 'Think in systems',
       description:
         '面对模糊任务时，我习惯先把目标、限制和关键动作拆出来，再决定怎么推进，而不是直接堆工具。',
+      video: '/media/feat1.mp4',
+      poster: '/media/feat1.jpg',
+      tone: 'linear-gradient(145deg, #38bdf8 0%, #1d4ed8 45%, #0b1224 100%)',
     },
     {
       title: '执行闭环意识',
       englishLabel: 'Close the loop',
       description:
         '我关注的不只是“做出来”，还包括去重、容错、状态记录、后续维护这些让项目能持续跑下去的部分。',
+      video: '/media/feat2.mp4',
+      poster: '/media/feat2.jpg',
+      tone: 'linear-gradient(145deg, #22d3ee 0%, #0e7490 42%, #082f49 100%)',
     },
     {
       title: 'AI 工具迁移能力',
       englishLabel: 'AI-native builder',
       description:
         'ChatGPT、Codex、Claude Code 这类工具对我来说不是展示项，而是帮助我提炼信息、拆工作流和补齐执行效率的基础能力。',
-    },
-    {
-      title: '表达持续升级',
-      englishLabel: 'Language upgrade',
-      description:
-        '我会长期打磨中文表达与英语能力，让思考不只停在脑子里，而能更清楚地被别人理解和使用。',
-    },
-    {
-      title: '细节与可用性耐心',
-      englishLabel: 'Polish matters',
-      description:
-        '我愿意在边界情况、响应式适配、失败回退和交互体验上多做一层，这通常决定一个作品是演示品还是成品。',
+      video: '/media/feat3.mp4',
+      poster: '/media/feat3.jpg',
+      tone: 'linear-gradient(145deg, #7dd3fc 0%, #0369a1 48%, #020617 100%)',
     },
   ],
   projects: [
@@ -100,6 +103,7 @@ export const siteContent: SiteContent = {
       proofPoints: ['发现源双模式', 'AI 摘要与日报生成', '状态记录与失败兜底'],
       href: 'https://github.com/NafYoung/auto-tool',
       tone: 'linear-gradient(145deg, #0ea5e9 0%, #0369a1 45%, #0f172a 100%)',
+      poster: '/media/feat1.jpg',
     },
     {
       title: '上海红色景点可视化 App',
@@ -115,6 +119,7 @@ export const siteContent: SiteContent = {
       proofPoints: ['地图标注与筛选', '路线推荐与时间线', '移动端与桌面端适配'],
       href: 'https://nafyoung.github.io/shanghai-red-landmarks-app/',
       tone: 'linear-gradient(145deg, #38bdf8 0%, #1d4ed8 42%, #0b1224 100%)',
+      poster: '/media/feat2.jpg',
     },
     {
       title: '英语阅读助手桌面应用',
@@ -130,6 +135,7 @@ export const siteContent: SiteContent = {
       proofPoints: ['四模块学习流', 'D1/D3/D7 复习', '本地进度与 LLM 配置'],
       href: 'https://github.com/NafYoung/english-reading-assistant',
       tone: 'linear-gradient(145deg, #22d3ee 0%, #0e7490 40%, #082f49 100%)',
+      poster: '/media/feat3.jpg',
     },
   ],
   workflow: [
@@ -159,6 +165,7 @@ export const siteContent: SiteContent = {
       subtitle: '数字经济｜硕士在读',
       description:
         '持续把数字经济视角、数据方法和 AI 工具实践组合起来，目标不是停留在概念理解，而是沉淀可展示的项目成果。',
+      poster: '/media/hero1.jpg',
     },
     {
       period: '2025.06 - 2025.10',
@@ -166,6 +173,7 @@ export const siteContent: SiteContent = {
       subtitle: '数字化运营实习生',
       description:
         '参与报名审核、信息整理、课程排期、社群支持和线上会议协助，用结构化表格与 Excel 清洗统计支撑项目执行。',
+      poster: '/media/hero2.jpg',
     },
     {
       period: '2021.09 - 2025.06',
@@ -173,6 +181,7 @@ export const siteContent: SiteContent = {
       subtitle: '市场营销｜本科',
       description:
         '建立了对用户、传播与表达的基础理解，也让我更倾向于把内容、运营与产品体验放在一起看待。',
+      poster: '/media/hero3.jpg',
     },
   ],
   contact: {

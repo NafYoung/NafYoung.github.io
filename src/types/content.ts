@@ -20,12 +20,17 @@ export interface HeroSlide {
   title: string
   accent: string
   gradient: string
+  video: string
+  poster: string
 }
 
 export interface Trait {
   title: string
   englishLabel: string
   description: string
+  video: string
+  poster: string
+  tone: string
 }
 
 export interface Project {
@@ -39,6 +44,7 @@ export interface Project {
   proofPoints: string[]
   href?: string
   tone: string
+  poster: string
 }
 
 export interface WorkflowStep {
@@ -52,6 +58,7 @@ export interface TimelineItem {
   title: string
   subtitle: string
   description: string
+  poster: string
 }
 
 export interface ContactInfo {

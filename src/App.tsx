@@ -47,7 +47,7 @@ function App() {
         <span>
           {siteContent.profile.displayName} / {siteContent.profile.englishName}
         </span>
-        <span>Built with React · WebGL · Lenis</span>
+        <span>Video · WebGL Glitch · Lenis · IO</span>
       </footer>
     </div>
   )
