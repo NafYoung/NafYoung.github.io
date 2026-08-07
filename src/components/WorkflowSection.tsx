@@ -1,29 +1,42 @@
+import { useInView } from '../hooks/useInView'
 import type { WorkflowStep } from '../types/content'
-import { SectionTitle } from './SectionTitle'
 
 interface WorkflowSectionProps {
   workflow: WorkflowStep[]
 }
 
 export function WorkflowSection({ workflow }: WorkflowSectionProps) {
-  return (
-    <section className="panel rise-in delay-4" id="workflow">
-      <SectionTitle
-        description="这部分不是励志口号，而是我在做项目、做运营支持和处理复杂任务时最常用的三段式方法。"
-        eyebrow="My playbook"
-        index="03"
-        title="我怎么做事"
-      />
+  const { ref, inView } = useInView<HTMLElement>({ threshold: 0.4 })
 
-      <ol className="workflow-grid">
-        {workflow.map((item) => (
-          <li className="workflow-card comic-frame" key={item.step}>
-            <span className="workflow-step">{item.step}</span>
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
-          </li>
-        ))}
-      </ol>
+  return (
+    <section className="section workflow" id="workflow" ref={ref}>
+      <div className="section-head">
+        <p className="eyebrow">Method board</p>
+        <h2>工作方法</h2>
+        <p className="section-desc">
+          滚到这里，背景层会放大展开，把方法步骤推到画面中央。
+        </p>
+      </div>
+
+      <div className={`board ${inView ? 'is-animate' : ''}`}>
+        <div className="board-bg" />
+        <div className="board-border" />
+        <div className="board-main">
+          <div className="board-main-inner">
+            {workflow.map((step) => (
+              <article key={step.step}>
+                <span>{step.step}</span>
+                <h3>{step.title}</h3>
+                <p>{step.description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+        <div className="board-labels">
+          <span>拆解问题</span>
+          <span>补齐闭环</span>
+        </div>
+      </div>
     </section>
   )
 }

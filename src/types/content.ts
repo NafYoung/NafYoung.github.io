@@ -15,6 +15,13 @@ export interface Profile {
   }>
 }
 
+export interface HeroSlide {
+  prompt: string
+  title: string
+  accent: string
+  gradient: string
+}
+
 export interface Trait {
   title: string
   englishLabel: string
@@ -30,6 +37,8 @@ export interface Project {
   build: string
   outcome: string
   proofPoints: string[]
+  href?: string
+  tone: string
 }
 
 export interface WorkflowStep {
@@ -54,6 +63,7 @@ export interface ContactInfo {
 
 export interface SiteContent {
   profile: Profile
+  heroSlides: HeroSlide[]
   traits: Trait[]
   projects: Project[]
   workflow: WorkflowStep[]

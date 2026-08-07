@@ -30,6 +30,29 @@ export const siteContent: SiteContent = {
       },
     ],
   },
+  heroSlides: [
+    {
+      prompt: '把分散公众号信息，自动收成每日摘要',
+      title: '内容监测',
+      accent: '#5eead4',
+      gradient:
+        'radial-gradient(88% 180% at 70% 8%, #1375c8 0%, #0c4a7a 32%, #081a36 68%, #040814 100%)',
+    },
+    {
+      prompt: '用地图把红色景点串成可探索路线',
+      title: '地图产品',
+      accent: '#7dd3fc',
+      gradient:
+        'radial-gradient(90% 170% at 62% 12%, #1d4ed8 0%, #0f3a6b 30%, #0a1f3d 70%, #050b18 100%)',
+    },
+    {
+      prompt: '把阅读听力口语写作，收成一个学习台',
+      title: '学习工具',
+      accent: '#67e8f9',
+      gradient:
+        'radial-gradient(85% 175% at 75% 5%, #0e7490 0%, #155e75 28%, #0c2744 72%, #060c20 100%)',
+    },
+  ],
   traits: [
     {
       title: '结构化思考',
@@ -67,8 +90,7 @@ export const siteContent: SiteContent = {
       title: '文旅公众号日报自动化系统',
       year: '独立开发',
       tags: ['Node.js', 'Playwright', 'GitHub Actions', 'LLM'],
-      summary:
-        '把文旅信息监测从人工盯源改造成可持续运行的内容 workflow。',
+      summary: '把文旅信息监测从人工盯源改造成可持续运行的内容 workflow。',
       challenge:
         '文旅信息分散在多个公众号与来源里，人工筛选、整理和生成日报非常耗时，也容易漏掉关键更新。',
       build:
@@ -76,13 +98,14 @@ export const siteContent: SiteContent = {
       outcome:
         '把重复性的内容运营工作改造成可持续执行的 workflow，让信息监测从“人盯人”变成“系统跑系统”。',
       proofPoints: ['发现源双模式', 'AI 摘要与日报生成', '状态记录与失败兜底'],
+      href: 'https://github.com/NafYoung/auto-tool',
+      tone: 'linear-gradient(145deg, #0ea5e9 0%, #0369a1 45%, #0f172a 100%)',
     },
     {
       title: '上海红色景点可视化 App',
       year: '独立开发',
       tags: ['地图产品', '内容展示', '移动端适配'],
-      summary:
-        '把分散景点内容组织成可浏览、可筛选、可分享的地图式产品体验。',
+      summary: '把分散景点内容组织成可浏览、可筛选、可分享的地图式产品体验。',
       challenge:
         '红色景点内容通常分散且缺乏组织，用户很难在浏览、筛选和路线规划之间获得流畅体验。',
       build:
@@ -90,13 +113,14 @@ export const siteContent: SiteContent = {
       outcome:
         '把静态信息做成更有传播力和探索感的产品体验，同时通过缓存、回退和可访问性优化强化实际可用性。',
       proofPoints: ['地图标注与筛选', '路线推荐与时间线', '移动端与桌面端适配'],
+      href: 'https://nafyoung.github.io/shanghai-red-landmarks-app/',
+      tone: 'linear-gradient(145deg, #38bdf8 0%, #1d4ed8 42%, #0b1224 100%)',
     },
     {
       title: '英语阅读助手桌面应用',
       year: '独立开发',
       tags: ['桌面应用', '学习工具', 'LLM 配置'],
-      summary:
-        '把阅读、听力、口语、写作和复习节奏整合成一个个人学习台。',
+      summary: '把阅读、听力、口语、写作和复习节奏整合成一个个人学习台。',
       challenge:
         '英语学习过程经常被阅读、听力、口语、写作四类需求割裂，学习记录和复习节奏也不够连续。',
       build:
@@ -104,6 +128,8 @@ export const siteContent: SiteContent = {
       outcome:
         '把分散的学习动作整合成一个更完整的个人学习台，也体现了我从需求梳理到封装落地的执行能力。',
       proofPoints: ['四模块学习流', 'D1/D3/D7 复习', '本地进度与 LLM 配置'],
+      href: 'https://github.com/NafYoung/english-reading-assistant',
+      tone: 'linear-gradient(145deg, #22d3ee 0%, #0e7490 40%, #082f49 100%)',
     },
   ],
   workflow: [

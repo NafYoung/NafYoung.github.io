@@ -1,40 +1,46 @@
 :root {
-  font-family:
-    'PingFang SC',
-    'Hiragino Sans GB',
-    'Microsoft YaHei',
+  --bg: #050b18;
+  --bg-elevated: #0a1628;
+  --text: #f5fbff;
+  --muted: rgba(226, 242, 255, 0.68);
+  --line: rgba(255, 255, 255, 0.1);
+  --accent: #5eead4;
+  --accent-2: #38bdf8;
+  --ease: cubic-bezier(0.44, 0, 0.56, 1);
+  --font-display: 'Syne', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
     sans-serif;
-  color: #162f2a;
-  background: #f7edd2;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --font-body: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
 }
 
 * {
   box-sizing: border-box;
 }
 
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
 html {
-  scroll-behavior: smooth;
+  background: var(--bg);
 }
 
 body {
   margin: 0;
   min-width: 320px;
-  background: #f7edd2;
+  color: var(--text);
+  background: var(--bg);
+  font-family: var(--font-body);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 body,
 button,
 input,
-textarea {
-  font-family:
-    'PingFang SC',
-    'Hiragino Sans GB',
-    'Microsoft YaHei',
-    sans-serif;
+textarea,
+a {
+  font-family: var(--font-body);
 }
 
 a {
@@ -42,12 +48,24 @@ a {
   text-decoration: none;
 }
 
+button {
+  border: 0;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
 img,
-svg {
+svg,
+canvas {
   display: block;
   max-width: 100%;
 }
 
 #root {
   min-height: 100vh;
+}
+
+::selection {
+  background: rgba(56, 189, 248, 0.35);
 }

@@ -1,84 +1,67 @@
-import avatarFallback from '../assets/avatar-fallback.png'
-import type { ContactInfo, Profile } from '../types/content'
+import { OceanBackdrop } from './OceanBackdrop'
+import { useRaceCarousel } from '../hooks/useRaceCarousel'
+import type { ContactInfo, HeroSlide, Profile } from '../types/content'
 
 interface HeroSectionProps {
   profile: Profile
   contact: ContactInfo
+  slides: HeroSlide[]
 }
 
-export function HeroSection({ profile, contact }: HeroSectionProps) {
+export function HeroSection({ profile, contact, slides }: HeroSectionProps) {
+  const { value, race, start, pause } = useRaceCarousel({
+    max: slides.length,
+    interval: 3000,
+    autoStart: true,
+  })
+
+  const active = slides[value] ?? slides[0]
+
   return (
-    <section className="hero-section rise-in delay-1" id="home">
-      <div className="hero-cover comic-frame">
-        <div className="hero-copy">
-          <span className="chapter-kicker">Personal brand dossier</span>
-          <p className="hero-kicker">{profile.role}</p>
-          <h1>{profile.headline}</h1>
-          <p className="hero-summary">{profile.summary}</p>
-
-          <ul className="badge-row hero-badges" aria-label="关键词">
-            {profile.badges.map((badge) => (
-              <li key={badge}>{badge}</li>
-            ))}
-          </ul>
-
-          <div className="cta-row">
-            <a
-              aria-label="在新标签页打开 NafYoung 的 GitHub"
-              className="cta-button primary"
-              href={contact.githubUrl}
-              rel="noreferrer"
-              target="_blank"
-            >
-              查看 GitHub
-            </a>
-            <a className="cta-button secondary" href={`mailto:${contact.email}`}>
-              发我邮件
-            </a>
-          </div>
-        </div>
-
-        <aside className="identity-board" aria-label="个人身份卡">
-          <span className="pin-label">Main Character</span>
-          <div className="portrait-frame">
-            <img
-              alt=""
-              aria-hidden="true"
-              className="portrait-outline"
-              src={avatarFallback}
-            />
-            <img
-              alt="NafYoung 的卡通头像主视觉"
-              className="portrait-photo"
-              src={avatarFallback}
-            />
-          </div>
-
-          <div className="identity-card">
-            <div>
-              <strong>
-                {profile.displayName} / {profile.englishName}
-              </strong>
-              <span>{profile.status}</span>
-              <span>{profile.location}</span>
-            </div>
-          </div>
-        </aside>
-      </div>
-
-      <div className="proof-strip" aria-label="个人品牌证据点">
-        {profile.proofPoints.map((item) => (
-          <article className="proof-card comic-frame" key={item.label}>
-            <span>{item.label}</span>
-            <strong>{item.value}</strong>
-            <p>{item.detail}</p>
-          </article>
+    <section
+      className="hero"
+      id="home"
+      onMouseEnter={pause}
+      onMouseLeave={start}
+    >
+      <div className="hero-stage" aria-hidden="true">
+        {slides.map((slide, index) => (
+          <OceanBackdrop
+            accent={slide.accent}
+            active={index === value}
+            gradient={slide.gradient}
+            key={slide.prompt}
+          />
         ))}
       </div>
 
-      <div className="mission-note comic-frame">
-        <span className="handwritten-note">current mission</span>
-        <p>{profile.mission}</p>
+      <div className="hero-center">
+        <p className="hero-role">{profile.role}</p>
+        <h1 className="hero-brand">{profile.englishName}</h1>
+        <p className="hero-line">{profile.headline}</p>
+      </div>
+
+      <div className="hero-rail" aria-label="场景预览">
+        {slides.map((slide, index) => (
+          <button
+            aria-current={index === value ? true : undefined}
+            className={`hero-thumb ${index === value ? 'is-active' : ''}`}
+            key={slide.prompt}
+            onMouseEnter={() => race(index)}
+            style={{ backgroundImage: slide.gradient }}
+            type="button"
+          >
+            <span>{slide.title}</span>
+          </button>
+        ))}
+      </div>
+
+      <div className="hero-bottom">
+        <a className="glass-prompt" href={`mailto:${contact.email}`}>
+          <span className="glass-prompt-text">{active?.prompt}</span>
+          <span className="glass-prompt-cta">开始对话</span>
+        </a>
+        <p className="hero-credit">视觉氛围由前端实时生成 · {profile.displayName}</p>
       </div>
     </section>
   )
