@@ -670,40 +670,32 @@
   font-size: 12px;
 }
 
-/* Showcase masonry */
-.showcase-cols {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 12px;
-  max-width: 1100px;
-  margin: -40px auto 0;
-  overflow: hidden;
+/* Education grid */
+.edu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 880px;
+  margin: 0 auto;
 }
 
-.showcase-col {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.showcase-card {
-  min-height: 220px;
-  padding: 22px;
+.showcase-card,
+.edu-card {
+  min-height: 200px;
+  padding: 28px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 18px;
   background-position: center;
   background-size: cover;
   opacity: 0;
-  transform: translateY(48px);
+  transform: translateY(28px);
   transition:
-    opacity 0.75s cubic-bezier(0.44, 0, 0.56, 1),
-    transform 0.75s cubic-bezier(0.44, 0, 0.56, 1);
-  transition-delay: calc(var(--col, 0) * 120ms + var(--i, 0) * 90ms);
+    opacity 0.65s cubic-bezier(0.44, 0, 0.56, 1),
+    transform 0.65s cubic-bezier(0.44, 0, 0.56, 1);
+  transition-delay: calc(var(--i, 0) * 90ms);
 }
 
-.showcase-cols.is-inview .showcase-card {
+.edu-grid.is-inview .edu-card {
   opacity: 1;
   transform: none;
 }
@@ -719,15 +711,10 @@
   font-size: 24px;
 }
 
-.showcase-card .sub {
-  margin: 0 0 10px;
-  color: rgba(165, 243, 252, 0.85);
-}
-
-.showcase-card p:last-child {
+.showcase-card .sub,
+.edu-card .sub {
   margin: 0;
-  color: rgba(235, 248, 255, 0.78);
-  line-height: 1.7;
+  color: rgba(165, 243, 252, 0.85);
 }
 
 /* Contact CTA */
@@ -838,10 +825,8 @@
     transform: translateX(-50%) scale(2.4);
   }
 
-  .showcase-cols {
-    flex-direction: column;
-    align-items: stretch;
-    margin-top: 0;
+  .edu-grid {
+    grid-template-columns: 1fr;
   }
 
   .dream-board-tags {

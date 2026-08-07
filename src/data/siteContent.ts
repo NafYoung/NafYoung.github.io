@@ -19,11 +19,6 @@ export const siteContent: SiteContent = {
         detail: '把想法推进到可展示、可复盘的作品',
       },
       {
-        label: '运营实习',
-        value: '1 段',
-        detail: '真实参与报名、排期、社群与数据整理',
-      },
-      {
         label: '关键词',
         value: 'AI × 内容 × 产品',
         detail: '用工具链和表达方式连接执行闭环',
@@ -163,24 +158,14 @@ export const siteContent: SiteContent = {
       period: '2025.09 - 2027.06',
       title: '上海大学',
       subtitle: '数字经济｜硕士在读',
-      description:
-        '持续把数字经济视角、数据方法和 AI 工具实践组合起来，目标不是停留在概念理解，而是沉淀可展示的项目成果。',
+      description: '',
       poster: '/media/hero1.jpg',
-    },
-    {
-      period: '2025.06 - 2025.10',
-      title: '上海微电子产业学院',
-      subtitle: '数字化运营实习生',
-      description:
-        '参与报名审核、信息整理、课程排期、社群支持和线上会议协助，用结构化表格与 Excel 清洗统计支撑项目执行。',
-      poster: '/media/hero2.jpg',
     },
     {
       period: '2021.09 - 2025.06',
       title: '上海海洋大学',
       subtitle: '市场营销｜本科',
-      description:
-        '建立了对用户、传播与表达的基础理解，也让我更倾向于把内容、运营与产品体验放在一起看待。',
+      description: '',
       poster: '/media/hero3.jpg',
     },
   ],
