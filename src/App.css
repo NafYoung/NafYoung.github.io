@@ -798,6 +798,12 @@
   font-size: 13px;
 }
 
+.footer-lab-link {
+  color: rgba(125, 211, 252, 0.78);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 @media (max-width: 980px) {
   .topnav nav {
     display: none;
