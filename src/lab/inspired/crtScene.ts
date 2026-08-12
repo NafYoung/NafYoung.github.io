@@ -54,8 +54,8 @@ void main(){
   float n = hash(uv * u_res + t) * 0.06 * u_glitch;
   col += n;
 
-  // bloom hint aligned with title/halo (visual center ~22% from top → uv.y 0.78)
-  float ringDist = abs(length((uv - vec2(0.5, 0.78)) * vec2(u_res.x / u_res.y, 1.0)) - 0.18);
+  // bloom hint aligned with title/halo (visual center ~37% from top → uv.y 0.63)
+  float ringDist = abs(length((uv - vec2(0.5, 0.63)) * vec2(u_res.x / u_res.y, 1.0)) - 0.18);
   float ring = smoothstep(0.04, 0.0, ringDist);
   col += vec3(0.55) * ring * 0.35;
 
@@ -100,13 +100,13 @@ export function drawTitleTexture(
   ctx.fillStyle = '#000'
   ctx.fillRect(0, 0, width, height)
 
-  const fontSize = Math.min(width * 0.16, height * 0.26)
+  const fontSize = Math.min(width * 0.14, height * 0.2)
   ctx.textAlign = 'center'
   ctx.textBaseline = 'middle'
   ctx.font = `800 ${fontSize}px "Syne", "IBM Plex Sans", "PingFang SC", sans-serif`
 
-  // Align with .signal-halo (top: 22%) so tagline below stays clear
-  const titleY = height * 0.22
+  // Align with .signal-halo (top: 37%); keep a tight Moonshot-like gap to the tagline
+  const titleY = height * 0.37
 
   // outer glow
   ctx.shadowColor = 'rgba(255,255,255,0.45)'
