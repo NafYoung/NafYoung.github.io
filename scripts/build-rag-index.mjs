@@ -171,60 +171,78 @@ async function fetchReadme(repo) {
 }
 
 async function docsFromGithub() {
-  const repos = await fetchJson(
-    `https://api.github.com/users/${owner}/repos?per_page=100&sort=updated`,
-  )
-  const publicRepos = repos.filter(
-    (r) =>
-      !r.private &&
-      !r.fork &&
-      !r.archived &&
-      !String(r.description || '').includes('[DEPRECATED]') &&
-      r.name !== privateKbRepo,
-  )
+  try {
+    const repos = await fetchJson(
+      `https://api.github.com/users/${owner}/repos?per_page=100&sort=updated`,
+    )
+    const publicRepos = repos.filter(
+      (r) =>
+        !r.private &&
+        !r.fork &&
+        !r.archived &&
+        !String(r.description || '').includes('[DEPRECATED]') &&
+        r.name !== privateKbRepo,
+    )
 
-  const docs = [
-    {
-      id: 'gh-profile',
-      title: 'GitHub Profile',
-      source: 'github',
-      url: `https://github.com/${owner}`,
-      text: 'NafYoung / 邵扬帆. Relentless learner. Building in public. Personal GitHub for AI workflow, product experiments, and tools.',
-    },
-  ]
-
-  for (const repo of publicRepos) {
-    const readme = await fetchReadme(repo.name)
-    const base = [
-      `仓库：${repo.full_name}`,
-      repo.description || '',
-      `语言：${repo.language || 'n/a'}`,
-      `主页：${repo.homepage || repo.html_url}`,
-      `Topics：${(repo.topics || []).join(', ')}`,
-    ]
-      .filter(Boolean)
-      .join('\n')
-
-    docs.push({
-      id: `gh-repo-${repo.name}`,
-      title: repo.name,
-      source: 'github',
-      url: repo.html_url,
-      text: base,
-    })
-
-    for (const [i, part] of chunkText(readme).entries()) {
-      docs.push({
-        id: `gh-readme-${repo.name}-${i}`,
-        title: `${repo.name} README`,
+    const docs = [
+      {
+        id: 'gh-profile',
+        title: 'GitHub Profile',
         source: 'github',
-        url: `${repo.html_url}#readme`,
-        text: `${repo.name}\n${repo.description || ''}\n${part}`,
-      })
-    }
-  }
+        url: `https://github.com/${owner}`,
+        text: 'NafYoung / 邵扬帆. Relentless learner. Building in public. Personal GitHub for AI workflow, product experiments, and tools.',
+      },
+    ]
 
-  return docs
+    for (const repo of publicRepos) {
+      const readme = await fetchReadme(repo.name)
+      const base = [
+        `仓库：${repo.full_name}`,
+        repo.description || '',
+        `语言：${repo.language || 'n/a'}`,
+        `主页：${repo.homepage || repo.html_url}`,
+        `Topics：${(repo.topics || []).join(', ')}`,
+      ]
+        .filter(Boolean)
+        .join('\n')
+
+      docs.push({
+        id: `gh-repo-${repo.name}`,
+        title: repo.name,
+        source: 'github',
+        url: repo.html_url,
+        text: base,
+      })
+
+      for (const [i, part] of chunkText(readme).entries()) {
+        docs.push({
+          id: `gh-readme-${repo.name}-${i}`,
+          title: `${repo.name} README`,
+          source: 'github',
+          url: `${repo.html_url}#readme`,
+          text: `${repo.name}\n${repo.description || ''}\n${part}`,
+        })
+      }
+    }
+
+    return docs
+  } catch (err) {
+    // Do not fail the site build / Pages deploy when GitHub is unreachable
+    // (TLS interception, rate limits, transient network errors, etc.).
+    console.warn(
+      'GitHub fetch failed; continuing without live GitHub docs:',
+      err?.cause?.message || err?.message || err,
+    )
+    return [
+      {
+        id: 'gh-profile',
+        title: 'GitHub Profile',
+        source: 'github',
+        url: `https://github.com/${owner}`,
+        text: 'NafYoung / 邵扬帆. Relentless learner. Building in public. Personal GitHub for AI workflow, product experiments, and tools.',
+      },
+    ]
+  }
 }
 
 function exportNormalPersona(kb) {
