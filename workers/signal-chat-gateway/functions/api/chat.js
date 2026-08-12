@@ -207,7 +207,9 @@ function buildMessages(question, chunks, history) {
 - 只依据资料陈述；没有就说「资料里没有」。
 - 禁止编造、禁止把自我定位/理念升级成「胜任某岗位」这类强结论。
 - 可以罗列资料里的具体做法与项目，但不要替他做面试式盖章评价。
+- 不要写「可以推断」「说明他胜任」这类评价句；只陈述做过什么、怎么做。
 - 有边界就说边界（例如偏运营/产品与工具实践，不等于算法研究），前提是资料支持或至少不要夸大。
+- 不要每次都主动甩邮箱；仅当资料不足且访客像要进一步联系时再提。
 
 【表达】
 - 短、像人说话：优先 3～6 句或少量要点，不要长篇编号小作文。
@@ -330,6 +332,7 @@ export async function onRequest(context) {
       return 3
     }
     const sources = [...chunks]
+      .filter((c) => !/gh-profile|GitHub Profile/i.test(`${c.id} ${c.title}`))
       .sort((a, b) => sourceRank(a) - sourceRank(b))
       .slice(0, 4)
       .map((c) => ({
@@ -338,6 +341,16 @@ export async function onRequest(context) {
         url: c.url,
         source: c.source,
       }))
+    if (!sources.length) {
+      sources.push(
+        ...chunks.slice(0, 3).map((c) => ({
+          id: c.id,
+          title: c.title,
+          url: c.url,
+          source: c.source,
+        })),
+      )
+    }
 
     return json(
       {
