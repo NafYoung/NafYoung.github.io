@@ -86,31 +86,6 @@ export function InspiredLabPage() {
           </div>
         </div>
       </main>
-
-      <section className="signal-notes">
-        <div>
-          <h2>What this page is</h2>
-          <p>
-            A visual craft study: CRT interference type, center halo, and a quiet
-            black frame. Built for learning motion and WebGL texture distortion.
-          </p>
-        </div>
-        <div>
-          <h2>What this page is not</h2>
-          <p>
-            Not an official product page. No third-party trademarks, logos, or
-            original marketing copy are used here.
-          </p>
-        </div>
-      </section>
-
-      <footer className="signal-foot">
-        <p>
-          Inspired by contemporary AI brand homepage craft · independent study by{' '}
-          {siteContent.profile.displayName} / {siteContent.profile.englishName}
-        </p>
-        <p>Not affiliated with Moonshot AI, Kimi, or related entities.</p>
-      </footer>
     </div>
   )
 }

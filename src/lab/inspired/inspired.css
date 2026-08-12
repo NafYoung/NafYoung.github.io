@@ -377,40 +377,6 @@ html.has-signal-cursor * {
   color: #000;
 }
 
-.signal-notes {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
-  width: min(900px, calc(100% - 32px));
-  margin: 0 auto;
-  padding: 80px 0 40px;
-}
-
-.signal-notes h2 {
-  margin: 0 0 10px;
-  font-family: var(--display);
-  font-size: 20px;
-}
-
-.signal-notes p {
-  margin: 0;
-  color: var(--muted);
-  line-height: 1.7;
-}
-
-.signal-foot {
-  width: min(900px, calc(100% - 32px));
-  margin: 0 auto;
-  padding: 24px 0 56px;
-  color: rgba(243, 243, 243, 0.42);
-  font-size: 13px;
-  line-height: 1.6;
-}
-
-.signal-foot p {
-  margin: 0 0 6px;
-}
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -426,11 +392,6 @@ html.has-signal-cursor * {
 @media (max-width: 720px) {
   .signal-nav nav {
     display: none;
-  }
-
-  .signal-notes {
-    grid-template-columns: 1fr;
-    padding-top: 56px;
   }
 
   .signal-content {
