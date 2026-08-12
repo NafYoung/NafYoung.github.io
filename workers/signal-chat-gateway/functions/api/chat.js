@@ -26,33 +26,58 @@ function tokenize(input) {
   return tokens
 }
 
+/** Loose question side: map colloquial asks to KB vocabulary. */
 function expandQuery(query) {
   const q = String(query || '')
+  const bags = [
+    {
+      hit: /学历|学校|毕业|本科|硕士|读研|就读|哪所|什么大学|教育|读的什|哪个学校/,
+      add: [
+        '学历', '学校', '毕业', '毕业于', '本科', '硕士', '大学', '就读',
+        '教育背景', '上海大学', '上海海洋大学', '市场营销', '数字经济',
+      ],
+    },
+    {
+      hit: /项目|作品|做过|开发|作品集|portfolio|github|仓库|demo|上线/,
+      add: ['项目', '作品', 'GitHub', '独立开发', '自动化', '地图', '英语阅读'],
+    },
+    {
+      hit: /技能|会什么|擅长|技术栈|工具|ai|编程|python|sql|能力/,
+      add: ['技能', 'Python', 'SQL', 'Git', 'AI工具', 'workflow', '擅长'],
+    },
+    {
+      hit: /实习|工作|职业|求职|方向|岗位|做什么|职业规划|就业/,
+      add: ['实习', '职业', '运营', '产品', '数字经济', '目标', '工作'],
+    },
+    {
+      hit: /英语|英文|口语|听力|学习方法|怎么学/,
+      add: ['英语', '学习', '口语', '阅读', '偏好'],
+    },
+    {
+      hit: /联系|邮箱|合作|约|聊聊|contact|邮件/,
+      add: ['联系', '合作', '邮件', 'GitHub', 'Contact'],
+    },
+    {
+      hit: /是谁|介绍|自己|个人|简介|关于你|关于他/,
+      add: ['简介', '邵扬帆', 'NafYoung', '运营', '产品', '上海'],
+    },
+  ]
+
   const extras = []
-  if (/学历|学校|毕业|本科|硕士|读研|就读|哪所|什么大学|教育/.test(q)) {
-    extras.push(
-      '学历',
-      '学校',
-      '毕业',
-      '毕业于',
-      '本科',
-      '硕士',
-      '大学',
-      '就读',
-      '教育背景',
-      '上海大学',
-      '上海海洋大学',
-    )
+  for (const bag of bags) {
+    if (bag.hit.test(q)) extras.push(...bag.add)
   }
-  if (/项目|作品|做过|开发/.test(q)) {
-    extras.push('项目', '作品', 'GitHub')
+  // Always keep a light personal anchor so vague questions still retrieve profile.
+  if (!extras.length) {
+    extras.push('邵扬帆', 'NafYoung', '项目', '技能', '简介')
   }
   return `${q} ${extras.join(' ')}`.trim()
 }
 
-function retrieve(chunks, query, topK = 5) {
+function retrieve(chunks, query, topK = 8) {
   const queryTerms = tokenize(expandQuery(query))
   if (!queryTerms.length) return chunks.slice(0, topK)
+
   const docs = chunks.map((c) => ({
     chunk: c,
     tokens: tokenize(`${c.title}\n${c.text}`),
@@ -65,6 +90,7 @@ function retrieve(chunks, query, topK = 5) {
   }
   const k1 = 1.2
   const b = 0.75
+
   let ranked = docs
     .map((d) => {
       const tf = new Map()
@@ -80,21 +106,53 @@ function retrieve(chunks, query, topK = 5) {
       }
       return { chunk: d.chunk, score }
     })
-    .filter((x) => x.score > 0)
     .sort((a, b) => b.score - a.score)
 
-  // Education fallback: if user asks about school/degree but BM25 is thin, force edu chunks in.
-  if (/学历|学校|毕业|本科|硕士|读研|就读|哪所|什么大学|教育/.test(String(query || ''))) {
-    const edu = chunks.filter(
-      (c) =>
-        /edu|教育|大学|本科|硕士|学历|毕业|就读/.test(
-          `${c.id}\n${c.title}\n${c.text}`,
-        ),
-    )
-    const seen = new Set(ranked.map((x) => x.chunk.id))
-    for (const c of edu) {
+  const positive = ranked.filter((x) => x.score > 0)
+  ranked = positive.length ? positive : ranked
+
+  // Topic soft-fallbacks: if a theme is asked, ensure theme chunks are present.
+  const topicRules = [
+    {
+      hit: /学历|学校|毕业|本科|硕士|读研|就读|哪所|什么大学|教育/,
+      re: /edu|教育|大学|本科|硕士|学历|毕业|就读|海洋|上海大学/,
+    },
+    {
+      hit: /项目|作品|做过|开发|github|仓库/,
+      re: /project|项目|作品|github|readme|独立开发/,
+    },
+    {
+      hit: /技能|会什么|擅长|技术|python|sql|ai/,
+      re: /skill|技能|python|sql|git|ai|工具|workflow/,
+    },
+    {
+      hit: /联系|邮箱|合作|contact/,
+      re: /contact|联系|邮件|合作|email/,
+    },
+    {
+      hit: /是谁|介绍|简介|关于/,
+      re: /profile|简介|身份|persona-identity|site-profile/,
+    },
+  ]
+
+  const q = String(query || '')
+  const seen = new Set(ranked.slice(0, topK).map((x) => x.chunk.id))
+  for (const rule of topicRules) {
+    if (!rule.hit.test(q)) continue
+    for (const c of chunks) {
       if (seen.has(c.id)) continue
-      ranked.push({ chunk: c, score: 0.01 })
+      if (!rule.re.test(`${c.id}\n${c.title}\n${c.text}`)) continue
+      ranked.push({ chunk: c, score: 0.001 })
+      seen.add(c.id)
+    }
+  }
+
+  // If still thin, prepend core profile/persona facts so the model has something grounded.
+  if (ranked.filter((x) => x.score > 0).length < 2) {
+    for (const c of chunks) {
+      if (seen.has(c.id)) continue
+      if (!/site-profile|persona-identity|persona-edu_|site-edu-/.test(c.id)) continue
+      ranked.unshift({ chunk: c, score: 0.002 })
       seen.add(c.id)
     }
   }
@@ -135,15 +193,17 @@ function buildMessages(question, chunks, history) {
   const messages = [
     {
       role: 'system',
-      content: `你是邵扬帆（NafYoung）个人站点上的助手。
-只用提供的资料回答关于他的经历、项目、技能与合作意向的问题。
-规则：
-1. 不要编造资料里没有的事实；不确定就明确说不知道，并建议邮件联系。
-2. 语气自然、简洁；可用「他/邵扬帆」指代，不要替他做无法核实的承诺。
-3. 优先中文回答；用户用英文提问时可英文回答。
-4. 若问题与他无关，礼貌拒绝并拉回个人相关话题。
-5. 回答简洁；涉及学历/学校时，把资料里的本科与硕士信息一并说清（若资料有）。
-6. 资料里已有明确事实时，直接回答，不要说「没有相关信息」。`,
+      content: `你是邵扬帆（NafYoung）个人站点助手。
+
+【提问侧】用户怎么问都可以：口语、简称、不完整句子都正常理解，尽量对上资料主题。
+
+【知识侧 / 红线】
+1. 只能依据下方「资料」回答；资料没有的事实一律不编、不脑补、不外推。
+2. 资料有的就直接答，不要假装不知道。
+3. 资料不足时，明确说「资料里没有」；可建议邮件联系，不要猜测。
+4. 不要把倾向/推断说成已发生的事实。
+5. 语气自然简洁；优先中文；无关闲聊可短回并拉回他的经历/项目/合作。
+6. 不要输出与资料无关的长篇通用知识。`,
     },
   ]
 
@@ -162,7 +222,7 @@ function buildMessages(question, chunks, history) {
 
   messages.push({
     role: 'user',
-    content: `资料：\n${context || '（暂无检索结果）'}\n\n用户问题：${question}`,
+    content: `资料（唯一事实来源）：\n${context || '（暂无检索结果）'}\n\n用户问题：${question}\n\n请只根据资料作答。`,
   })
 
   return messages
@@ -215,7 +275,7 @@ export async function onRequest(context) {
       return json({ error: 'Index unavailable' }, 502, headers)
     }
     const index = await indexRes.json()
-      const chunks = retrieve(index.chunks || [], question, 8)
+    const chunks = retrieve(index.chunks || [], question, 8)
     const messages = buildMessages(question, chunks, history)
 
     const llmRes = await fetch(DEEPSEEK_URL, {
@@ -226,7 +286,7 @@ export async function onRequest(context) {
       },
       body: JSON.stringify({
         model: 'deepseek-chat',
-        temperature: 0.4,
+        temperature: 0.2,
         max_tokens: 700,
         messages,
       }),
