@@ -42,11 +42,11 @@ function expandQuery(query) {
       add: ['项目', '作品', 'GitHub', '独立开发', '自动化', '地图', '英语阅读'],
     },
     {
-      hit: /技能|会什么|擅长|技术栈|工具|ai|编程|python|sql|能力/,
+      hit: /技能|会什么|会啥|能干|擅长|技术栈|工具|ai|编程|python|sql|能力/,
       add: ['技能', 'Python', 'SQL', 'Git', 'AI工具', 'workflow', '擅长'],
     },
     {
-      hit: /实习|工作|职业|求职|方向|岗位|做什么|职业规划|就业/,
+      hit: /实习|工作|职业|求职|方向|岗位|做什么|职业规划|就业|干啥/,
       add: ['实习', '职业', '运营', '产品', '数字经济', '目标', '工作'],
     },
     {
@@ -151,13 +151,15 @@ function retrieve(chunks, query, topK = 8) {
   if (ranked.filter((x) => x.score > 0).length < 2) {
     for (const c of chunks) {
       if (seen.has(c.id)) continue
-      if (!/site-profile|persona-identity|persona-edu_|site-edu-/.test(c.id)) continue
+      if (!/site-profile|persona-identity|persona-edu_|site-edu-|persona-skill_|site-project-/.test(c.id)) continue
       ranked.unshift({ chunk: c, score: 0.002 })
       seen.add(c.id)
     }
   }
 
-  return ranked.slice(0, topK).map((x) => x.chunk)
+  const out = ranked.slice(0, topK).map((x) => x.chunk)
+  if (!out.length && chunks.length) return chunks.slice(0, topK)
+  return out
 }
 
 function corsHeaders(origin, allowed) {
