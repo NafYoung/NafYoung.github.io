@@ -1,11 +1,11 @@
-import { useEffect, useRef, useState, type FormEvent } from 'react'
+import { useEffect, useRef } from 'react'
 import { mountCrtScene } from '../lab/inspired/crtScene'
+import { SignalChat } from '../lab/inspired/SignalChat'
 import { SignalCursor } from '../lab/inspired/SignalCursor'
 import { siteContent } from '../data/siteContent'
 
 export function InspiredLabPage() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
-  const [draft, setDraft] = useState('')
   const reduceMotion =
     typeof window !== 'undefined' &&
     window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -34,15 +34,6 @@ export function InspiredLabPage() {
       handle?.destroy()
     }
   }, [reduceMotion])
-
-  const onSubmit = (event: FormEvent) => {
-    event.preventDefault()
-    const q = draft.trim()
-    const body = q
-      ? `你好，我想聊：${q}`
-      : '你好，我想了解你的项目与合作方式。'
-    window.location.href = `mailto:${siteContent.contact.email}?subject=${encodeURIComponent('From Signal Lab')}&body=${encodeURIComponent(body)}`
-  }
 
   return (
     <div className="signal-page">
@@ -78,32 +69,7 @@ export function InspiredLabPage() {
             Seeking a cleaner path from messy signals to working systems.
           </p>
 
-          <form className="signal-box" onSubmit={onSubmit}>
-            <label className="sr-only" htmlFor="signal-input">
-              Message
-            </label>
-            <textarea
-              id="signal-input"
-              value={draft}
-              onChange={(e) => setDraft(e.target.value)}
-              placeholder="Throw me a hard one. I’m listening."
-              rows={3}
-            />
-            <button
-              aria-label="Send"
-              className="signal-send"
-              disabled={false}
-              type="submit"
-            >
-              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-                <path
-                  fill="currentColor"
-                  d="M12 4l-1.4 1.4 5.6 5.6H4v2h12.2l-5.6 5.6L12 20l8-8z"
-                  transform="rotate(-90 12 12)"
-                />
-              </svg>
-            </button>
-          </form>
+          <SignalChat />
 
           <div className="signal-ctas">
             <a className="signal-pill" href="/#projects">

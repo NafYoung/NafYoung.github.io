@@ -1,0 +1,778 @@
+{
+  "version": 1,
+  "builtAt": "2026-08-12T03:34:12.499Z",
+  "owner": "NafYoung",
+  "chunkCount": 110,
+  "chunks": [
+    {
+      "id": "site-profile",
+      "title": "个人简介",
+      "source": "site",
+      "url": "https://nafyoung.github.io/",
+      "text": "邵扬帆 / NafYoung\nAI-native 的运营 / 产品型实践者\n把零散信息、AI 工具和执行流程，串成真正能跑起来的作品与方案。\n我更关心一件事能不能从“想法”走到“可持续执行”。无论是内容监测、地图式产品还是英语学习工具，我都习惯先拆问题，再把流程、体验和细节补成闭环。\n上海大学数字经济硕士在读\n上海 / Shanghai\n当前在持续把 AI、运营执行与产品表达，磨成更完整的个人品牌组合。\n关键词：AI workflow、运营执行、产品化表达"
+    },
+    {
+      "id": "site-project-文旅公众号日报自动化系统",
+      "title": "文旅公众号日报自动化系统",
+      "source": "site",
+      "url": "https://github.com/NafYoung/auto-tool",
+      "text": "文旅公众号日报自动化系统\n独立开发\n标签：Node.js、Playwright、GitHub Actions、LLM\n把文旅信息监测从人工盯源改造成可持续运行的内容 workflow。\n挑战：文旅信息分散在多个公众号与来源里，人工筛选、整理和生成日报非常耗时，也容易漏掉关键更新。\n做法：围绕文章发现、正文抓取、AI 摘要、日报生成和邮件分发搭建自动化链路，并补齐发现源双模式、去重、状态记录、失败兜底和定时执行。\n结果：把重复性的内容运营工作改造成可持续执行的 workflow，让信息监测从“人盯人”变成“系统跑系统”。\n要点：发现源双模式、AI 摘要与日报生成、状态记录与失败兜底"
+    },
+    {
+      "id": "site-project-上海红色景点可视化 App",
+      "title": "上海红色景点可视化 App",
+      "source": "site",
+      "url": "https://nafyoung.github.io/shanghai-red-landmarks-app/",
+      "text": "上海红色景点可视化 App\n独立开发\n标签：地图产品、内容展示、移动端适配\n把分散景点内容组织成可浏览、可筛选、可分享的地图式产品体验。\n挑战：红色景点内容通常分散且缺乏组织，用户很难在浏览、筛选和路线规划之间获得流畅体验。\n做法：设计地图式内容展示结构，支持景点标注、搜索筛选、路线推荐、时间线浏览与景点卡片联动，并补充海报分享、路线摘要和桌面端/移动端适配。\n结果：把静态信息做成更有传播力和探索感的产品体验，同时通过缓存、回退和可访问性优化强化实际可用性。\n要点：地图标注与筛选、路线推荐与时间线、移动端与桌面端适配"
+    },
+    {
+      "id": "site-project-英语阅读助手桌面应用",
+      "title": "英语阅读助手桌面应用",
+      "source": "site",
+      "url": "https://github.com/NafYoung/english-reading-assistant",
+      "text": "英语阅读助手桌面应用\n独立开发\n标签：桌面应用、学习工具、LLM 配置\n把阅读、听力、口语、写作和复习节奏整合成一个个人学习台。\n挑战：英语学习过程经常被阅读、听力、口语、写作四类需求割裂，学习记录和复习节奏也不够连续。\n做法：围绕阅读、听力、口语、写作四模块搭建桌面应用，支持原文导入、词句拆解、写作练习、D1/D3/D7 复习、本地进度持久化与 LLM 接口配置。\n结果：把分散的学习动作整合成一个更完整的个人学习台，也体现了我从需求梳理到封装落地的执行能力。\n要点：四模块学习流、D1/D3/D7 复习、本地进度与 LLM 配置"
+    },
+    {
+      "id": "site-edu-上海大学",
+      "title": "上海大学 · 数字经济｜硕士在读",
+      "source": "site",
+      "url": "https://nafyoung.github.io/#education",
+      "text": "2025.09 - 2027.06\n上海大学\n数字经济｜硕士在读"
+    },
+    {
+      "id": "site-edu-上海海洋大学",
+      "title": "上海海洋大学 · 市场营销｜本科",
+      "source": "site",
+      "url": "https://nafyoung.github.io/#education",
+      "text": "2021.09 - 2025.06\n上海海洋大学\n市场营销｜本科"
+    },
+    {
+      "id": "site-workflow-01",
+      "title": "工作方式 01 先拆问题，再搭流程",
+      "source": "site",
+      "url": "https://nafyoung.github.io/",
+      "text": "先拆问题，再搭流程\n我会先确认目标、使用场景和阻塞点，避免在问题还没看清楚时就急着选工具或堆功能。"
+    },
+    {
+      "id": "site-workflow-02",
+      "title": "工作方式 02 先做可运行版本，再补细节与容错",
+      "source": "site",
+      "url": "https://nafyoung.github.io/",
+      "text": "先做可运行版本，再补细节与容错\n我偏好先把主链路跑通，然后再把去重、失败回退、状态记录、适配体验这些稳定性细节往上加。"
+    },
+    {
+      "id": "site-workflow-03",
+      "title": "工作方式 03 工具为目标服务，不为炫技服务",
+      "source": "site",
+      "url": "https://nafyoung.github.io/",
+      "text": "工具为目标服务，不为炫技服务\n无论是 AI、脚本自动化还是产品交互，我都更看重它是否真的减少重复劳动、提高信息组织效率和体验质量。"
+    },
+    {
+      "id": "site-contact",
+      "title": "联系方式",
+      "source": "site",
+      "url": "https://nafyoung.github.io/#contact",
+      "text": "欢迎聊 AI 应用运营、内容 workflow、产品表达或任何值得被做成闭环的点子。\nGitHub：https://github.com/NafYoung\nEmail：2807434405@qq.com"
+    },
+    {
+      "id": "gh-profile",
+      "title": "GitHub Profile",
+      "source": "github",
+      "url": "https://github.com/NafYoung",
+      "text": "NafYoung / 邵扬帆. Relentless learner. Building in public. Personal GitHub for AI workflow, product experiments, and tools."
+    },
+    {
+      "id": "gh-repo-NafYoung.github.io",
+      "title": "NafYoung.github.io",
+      "source": "github",
+      "url": "https://github.com/NafYoung/NafYoung.github.io",
+      "text": "仓库：NafYoung/NafYoung.github.io\nPersonal GitHub Pages site.\n语言：HTML\n主页：https://github.com/NafYoung/NafYoung.github.io\nTopics：github-pages, personal-site, vite"
+    },
+    {
+      "id": "gh-readme-NafYoung.github.io-0",
+      "title": "NafYoung.github.io README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/NafYoung.github.io#readme",
+      "text": "NafYoung.github.io\nPersonal GitHub Pages site.\n# NafYoung.github.io\n\n邵扬帆 / NafYoung 个人站。深色沉浸式落地页，参考即梦官网的前端手法：\n\n- Lenis 平滑滚动\n- Hero 场景轮播 + 毛玻璃 CTA\n- WebGL 圆角 / 边缘色散媒体卡（自动降级）\n- IntersectionObserver 触发的进场动画\n\n## 本地开发\n\n```bash\nnpm install\nnpm run dev\n```\n\n## 构建\n\n```bash\nnpm run build\nnpm run preview\n```\n\n推送到 `main` 后，GitHub Actions 会自动部署到 GitHub Pages。"
+    },
+    {
+      "id": "gh-repo-customer-service-agent-v0",
+      "title": "customer-service-agent-v0",
+      "source": "github",
+      "url": "https://github.com/NafYoung/customer-service-agent-v0",
+      "text": "仓库：NafYoung/customer-service-agent-v0\nRIVET: shoe/apparel CS portfolio prototype — bounded single Agent + deterministic transaction backend (not a production system).\n语言：Python\n主页：https://rivet-public-demo.onrender.com/\nTopics：agent, deepseek, evaluation, fastapi, portfolio, tool-calling"
+    },
+    {
+      "id": "gh-readme-customer-service-agent-v0-0#0",
+      "title": "customer-service-agent-v0 README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/customer-service-agent-v0#readme",
+      "text": "customer-service-agent-v0\nRIVET: shoe/apparel CS portfolio prototype — bounded single Agent + deterministic transaction backend (not a production system).\n# RIVET · Customer Service Agent v0\n\n鞋服电商售后的**有界单 Agent 作品原型**：语言理解与交易执行分离；写操作走  \n`prepare → 宿主展示 → 可信确认 → execute`，模型拿不到执行权限。\n\n> **不是生产系统。** 数据全为合成样例。详细文档见 [`docs/README_DETAILED.md`](docs/README_DETAILED.md)。\n\n## 一句话架构\n\n```text\n用户 → Host UI\n        ├─ 只读 Agent（精确 6 工具）→ DeepSeek（OpenAI-compatible）\n        ├─ Preparation Agent（精确 9 工具，只 prepare，不 execute）\n        └─ 宿主确认令牌 → 确定性后端执行（幂等）\n```\n\n- FastAPI + SQLAlchemy + SQLite；跨客户隔离  \n- 取消 / 退货 / 换货：确定性资格规则 + 版本化政策  \n- Eval：开发集 / 公开回归 / holdout（含失败后归因复验）+ 持久预算闸门  \n- CI：`ruff` · `mypy` · 覆盖率 ·"
+    },
+    {
+      "id": "gh-readme-customer-service-agent-v0-0#1",
+      "title": "customer-service-agent-v0 README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/customer-service-agent-v0#readme",
+      "text": "te；跨客户隔离  \n- 取消 / 退货 / 换货：确定性资格规则 + 版本化政策  \n- Eval：开发集 / 公开回归 / holdout（含失败后归因复验）+ 持久预算闸门  \n- CI：`ruff` · `mypy` · 覆盖率 · Schema freshness · `pip-audit` · Gitleaks  \n\n## 评测结果（面试可讲）\n\n| 门 | 结果 | 说明 |\n|---|---|---|\n| 开发集 10×4 | 40/40，`pass^4=1.00` | 参与过 Prompt 优化，不能冒充 holdout |"
+    },
+    {
+      "id": "gh-readme-customer-service-agent-v0-1#0",
+      "title": "customer-service-agent-v0 README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/customer-service-agent-v0#readme",
+      "text": "customer-service-agent-v0\nRIVET: shoe/apparel CS portfolio prototype — bounded single Agent + deterministic transaction backend (not a production system).\nitleaks  \n\n## 评测结果（面试可讲）\n\n| 门 | 结果 | 说明 |\n|---|---|---|\n| 开发集 10×4 | 40/40，`pass^4=1.00` | 参与过 Prompt 优化，不能冒充 holdout |\n| 语义校准 #4 | 49/49 | 隔离裁判 |\n| 公开回归 7×4 | 28/28，`pass^4=1.00` | 加固后现役 |\n| holdout v1 | 46/80，`pass^4=0.35` | 已退役；无真实安全写入违规 |\n| holdout v2 | 44/80，`pass^4=0.40` | 已退役；见 [postmortem](docs/testing/holdout-v2-postmortem.md) |\n| 业务写入（只读门） | 0 | 工具白名单 + 状态哈希 |\n\n诚实叙事：**holdout 未过门** → 归因 → 修复 → 用公开 7×4 证明不回退。不是把 FAIL 改写成 PASS。\n\n## 在线演示（Render）\n\n公网托管步骤见 [`docs/13_hosted_demo_render.md`](docs/13_hosted_demo_render.md)\n（GitHub 仓库 + R"
+    },
+    {
+      "id": "gh-readme-customer-service-agent-v0-1#1",
+      "title": "customer-service-agent-v0 README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/customer-service-agent-v0#readme",
+      "text": "FAIL 改写成 PASS。\n\n## 在线演示（Render）\n\n公网托管步骤见 [`docs/13_hosted_demo_render.md`](docs/13_hosted_demo_render.md)\n（GitHub 仓库 + Render Free Web Service；**不是** GitHub Pages）。\n\n**Demo：** https://rivet-public-demo.onrender.com/\n\nFree 档闲置约 15 分钟会休眠，首次打开可能需等待约 1 分钟。\n\n## 3 分钟本地演示（无需 API Ke"
+    },
+    {
+      "id": "gh-readme-customer-service-agent-v0-2#0",
+      "title": "customer-service-agent-v0 README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/customer-service-agent-v0#readme",
+      "text": "customer-service-agent-v0\nRIVET: shoe/apparel CS portfolio prototype — bounded single Agent + deterministic transaction backend (not a production system).\nb Pages）。\n\n**Demo：** https://rivet-public-demo.onrender.com/\n\nFree 档闲置约 15 分钟会休眠，首次打开可能需等待约 1 分钟。\n\n## 3 分钟本地演示（无需 API Key）\n\n```bash\npython -m venv .venv && source .venv/bin/activate\npip install -r requirements-dev.txt\ntest -f .env || cp .env.example .env\n\nAPP_MODE=public_demo \\\nDEMO_AGENT_MODE=preparation_scripted \\\nDEMO_ALLOWED_ORIGIN=http://127.0.0.1:8000 \\\nDEMO_COOKIE_SECURE=false \\\npython -m uvicorn app.main:app --host 127.0.0.1 --port 8000\n```\n\n打开 http://127.0.0.1:8000/ →「取消订单 ORD-1001」→ 核对确认卡 →「确认并执行」或「拒绝」。\n消息经 **Preparation Agent**（"
+    },
+    {
+      "id": "gh-readme-customer-service-agent-v0-2#1",
+      "title": "customer-service-agent-v0 README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/customer-service-agent-v0#readme",
+      "text": "t 127.0.0.1 --port 8000\n```\n\n打开 http://127.0.0.1:8000/ →「取消订单 ORD-1001」→ 核对确认卡 →「确认并执行」或「拒绝」。\n消息经 **Preparation Agent**（scripted 多轮工具，零外网）写出 pending；确认与执行仍由宿主完成。模糊意图（如「我想退货」）会先补问订单号。\n\n本地 live DeepSeek（**禁止**公开部署；走预算闸门，累计硬上限见项目规则）：\n\n```bash\nAPP_MODE=local \\\nDEMO_AGENT_MODE=pr"
+    },
+    {
+      "id": "gh-readme-customer-service-agent-v0-3#0",
+      "title": "customer-service-agent-v0 README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/customer-service-agent-v0#readme",
+      "text": "customer-service-agent-v0\nRIVET: shoe/apparel CS portfolio prototype — bounded single Agent + deterministic transaction backend (not a production system).\n由宿主完成。模糊意图（如「我想退货」）会先补问订单号。\n\n本地 live DeepSeek（**禁止**公开部署；走预算闸门，累计硬上限见项目规则）：\n\n```bash\nAPP_MODE=local \\\nDEMO_AGENT_MODE=preparation_live \\\nDEMO_ALLOWED_ORIGIN=http://127.0.0.1:8000 \\\nDEMO_COOKIE_SECURE=false \\\nDEEPSEEK_API_KEY=... \\\nHOST_CONFIRMATION_TOKEN=... \\\npython -m uvicorn app.main:app --host 127.0.0.1 --port 8000\n```\n\n## 开发运行\n\n```bash\n# 建议 Python ≥ 3.11\npip install -r requirements-dev.txt\ncp .env.example .env   # 设置 HOST_CONFIRMATION_TOKEN；live eval 再加 DEEPSEEK_API_KEY\nuvicorn app.main:app --reload --env-file .env\n```\n\n- API：http://1"
+    },
+    {
+      "id": "gh-readme-customer-service-agent-v0-3#1",
+      "title": "customer-service-agent-v0 README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/customer-service-agent-v0#readme",
+      "text": "HOST_CONFIRMATION_TOKEN；live eval 再加 DEEPSEEK_API_KEY\nuvicorn app.main:app --reload --env-file .env\n```\n\n- API：http://127.0.0.1:8000/docs  \n- 演示账号：`linfan@example.com` / `246810`  \n- 测试：`pytest` · `make verify`  \n\n更多（架构图、取消全流程 curl、Eval 协议、文档索引）→ [`docs/README_DETAILED.md`]"
+    },
+    {
+      "id": "gh-readme-customer-service-agent-v0-4",
+      "title": "customer-service-agent-v0 README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/customer-service-agent-v0#readme",
+      "text": "customer-service-agent-v0\nRIVET: shoe/apparel CS portfolio prototype — bounded single Agent + deterministic transaction backend (not a production system).\n@example.com` / `246810`  \n- 测试：`pytest` · `make verify`  \n\n更多（架构图、取消全流程 curl、Eval 协议、文档索引）→ [`docs/README_DETAILED.md`](docs/README_DETAILED.md) · [`docs/09_project_status.md`](docs/09_project_status.md)"
+    },
+    {
+      "id": "gh-repo-macos-clash-wireguard-split-guide",
+      "title": "macos-clash-wireguard-split-guide",
+      "source": "github",
+      "url": "https://github.com/NafYoung/macos-clash-wireguard-split-guide",
+      "text": "仓库：NafYoung/macos-clash-wireguard-split-guide\nmacOS 上使用 Clash Verge Rev、Mihomo、WireGuard 与 SSH 备用通道实现国内直连、国外 VPS 分流的可复现指南\n语言：Shell\n主页：https://github.com/NafYoung/macos-clash-wireguard-split-guide\nTopics："
+    },
+    {
+      "id": "gh-readme-macos-clash-wireguard-split-guide-0#0",
+      "title": "macos-clash-wireguard-split-guide README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/macos-clash-wireguard-split-guide#readme",
+      "text": "macos-clash-wireguard-split-guide\nmacOS 上使用 Clash Verge Rev、Mihomo、WireGuard 与 SSH 备用通道实现国内直连、国外 VPS 分流的可复现指南\n# macOS + Mihomo 分流：国内直连、海外 WireGuard、SSH 备用与 TUN 防绕过\n\n这是一套可回滚、可验证的 macOS 分流方案：\n\n- 国内、局域网和指定应用走本机物理网络。\n- 其他流量优先走 VPS 上的 WireGuard。\n- WireGuard 暂时失效时，后续 TCP 连接改走同一台 VPS 的 SSH SOCKS。\n- System Proxy 与 TUN 同时开启；TUN 扩大覆盖到遵循正常内核路由、未被\n  route exclusion 排除的 IPv4 UDP/WebRTC 等流量。\n\n它不是“完美隐藏”方案。主线保留国内直连，因此不同网站看到不同出口是\n预期；SSH 备用也不支持 UDP。需要所有公网目标统一使用 VPS 出口时，应\n改成另一套单一出口策略，并接受国内访问可能变慢。\n\n## 当前验证结论\n\n本次公开基线在以下环境完成验证：\n\n- macOS 26.5.2，Apple Silicon\n- Clash Verge Rev 2.5.2\n- Mihomo 1.19.29\n\n这些版本是证据锚点，不是照着攻略操作的硬门槛。其他近期版本通常沿用\n相同架构；UI、DNS 合并、服务生命周期或字段默认值出现差异时，再读取本机\n版本和对应 release notes。\n\n2026-07-28 的 TUN 开/关/"
+    },
+    {
+      "id": "gh-readme-macos-clash-wireguard-split-guide-0#1",
+      "title": "macos-clash-wireguard-split-guide README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/macos-clash-wireguard-split-guide#readme",
+      "text": "29\n\n这些版本是证据锚点，不是照着攻略操作的硬门槛。其他近期版本通常沿用\n相同架构；UI、DNS 合并、服务生命周期或字段默认值出现差异时，再读取本机\n版本和对应 release notes。\n\n2026-07-28 的 TUN 开/关/恢复 A/B 共完成 105 次经同一 mixed-port 入口的\n真实请求，全部成功。关闭 TUN 没有表现得更快，部分海外请求反而更慢；这\n只能支持“未发现 TUN 拖慢 System Proxy 路径”，不能证明"
+    },
+    {
+      "id": "gh-readme-macos-clash-wireguard-split-guide-1#0",
+      "title": "macos-clash-wireguard-split-guide README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/macos-clash-wireguard-split-guide#readme",
+      "text": "macos-clash-wireguard-split-guide\nmacOS 上使用 Clash Verge Rev、Mihomo、WireGuard 与 SSH 备用通道实现国内直连、国外 VPS 分流的可复现指南\n的 TUN 开/关/恢复 A/B 共完成 105 次经同一 mixed-port 入口的\n真实请求，全部成功。关闭 TUN 没有表现得更快，部分海外请求反而更慢；这\n只能支持“未发现 TUN 拖慢 System Proxy 路径”，不能证明 TUN 会提速，也\n不外推到 TUN-only UDP。恢复后，两个独立 raw STUN IPv4 目标\n的 UDP 响应与代理出口一致，普通公网路由重新进入 TUN。真实浏览器\nWebRTC/ICE 在 Google Chrome 150 连续 3 轮均只得到与 HTTP 出口一致的\n`srflx`，没有公网候选错配或 IPv6 candidate；本机检查还未观察到全局 IPv6\nroute。该结果不自动覆盖微信内嵌 WebView、Safari 或 Firefox。完整结果见\n[验收与性能基线](docs/verification.md)。\n\n## 架构\n\n```mermaid\nflowchart LR\n    A[\"遵循 macOS 代理设置的应用\"] --> B[\"System Proxy\"]\n    C[\"未被排除的 IPv4 UDP/WebRTC 等流量\"] --> D[\"TUN + auto-route\"]\n    B --> E[\"Mihomo Rule\"]\n    D --> E\n    E -->|\""
+    },
+    {
+      "id": "gh-readme-macos-clash-wireguard-split-guide-1#1",
+      "title": "macos-clash-wireguard-split-guide README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/macos-clash-wireguard-split-guide#readme",
+      "text": "Proxy\"]\n    C[\"未被排除的 IPv4 UDP/WebRTC 等流量\"] --> D[\"TUN + auto-route\"]\n    B --> E[\"Mihomo Rule\"]\n    D --> E\n    E -->|\"国内 / 局域网\"| F[\"DIRECT-WIFI\"]\n    E -->|\"其他目标\"| G[\"AUTO-FAILOVER\"]\n    G -->|\"主路径，TCP + UDP\"| H[\"Mihomo 原生 WireG"
+    },
+    {
+      "id": "gh-readme-macos-clash-wireguard-split-guide-2#0",
+      "title": "macos-clash-wireguard-split-guide README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/macos-clash-wireguard-split-guide#readme",
+      "text": "macos-clash-wireguard-split-guide\nmacOS 上使用 Clash Verge Rev、Mihomo、WireGuard 与 SSH 备用通道实现国内直连、国外 VPS 分流的可复现指南\nE -->|\"国内 / 局域网\"| F[\"DIRECT-WIFI\"]\n    E -->|\"其他目标\"| G[\"AUTO-FAILOVER\"]\n    G -->|\"主路径，TCP + UDP\"| H[\"Mihomo 原生 WireGuard\"]\n    G -->|\"备用，仅 TCP\"| I[\"本机 SSH SOCKS\"]\n    H --> J[\"VPS\"]\n    I --> J\n```\n\nSystem Proxy 和 TUN 是两个独立开关，可以同时为真。Clash Verge Rev\n首页停留在“系统代理”区域，只代表当前显示的卡片，不代表 TUN 没运行。\n进入 Mihomo 之后，真正决定 `DIRECT-WIFI`、WireGuard 或 SSH 的是规则和\n策略组。详见 [架构与边界](docs/architecture.md)。\n\n## 从哪里开始\n\n| 当前状态 | 阅读入口 |\n|---|---|\n| 还没有 VPS | [购买 VPS 前的选择](docs/vps-purchase.md) |\n| 已有纯 Ubuntu VPS，需要 WireGuard 服务端 | [VPS 服务端配置](docs/server-setup.md) |\n| 已有 VPS、WireGuard Peer 与 SSH | [macOS 客户端安装](docs/"
+    },
+    {
+      "id": "gh-readme-macos-clash-wireguard-split-guide-2#1",
+      "title": "macos-clash-wireguard-split-guide README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/macos-clash-wireguard-split-guide#readme",
+      "text": "有纯 Ubuntu VPS，需要 WireGuard 服务端 | [VPS 服务端配置](docs/server-setup.md) |\n| 已有 VPS、WireGuard Peer 与 SSH | [macOS 客户端安装](docs/setup.md) |\n| 已部署，需要完整验收 | [验收与性能基线](docs/verification.md) |\n| 发生慢、断网或泄露检测异常 | [排障矩阵](docs/troubleshooting."
+    },
+    {
+      "id": "gh-readme-macos-clash-wireguard-split-guide-3#0",
+      "title": "macos-clash-wireguard-split-guide README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/macos-clash-wireguard-split-guide#readme",
+      "text": "macos-clash-wireguard-split-guide\nmacOS 上使用 Clash Verge Rev、Mihomo、WireGuard 与 SSH 备用通道实现国内直连、国外 VPS 分流的可复现指南\n客户端安装](docs/setup.md) |\n| 已部署，需要完整验收 | [验收与性能基线](docs/verification.md) |\n| 发生慢、断网或泄露检测异常 | [排障矩阵](docs/troubleshooting.md) |\n| 准备交给本地智能体协助 | [智能体协作手册](docs/agent-runbook.md) |\n\n## 快速部署\n\n1. 备份当前 Clash profile、应用设置和系统代理状态，记录回滚入口。\n2. 迁移用户保留一条已经通过真实请求的海外路径；全新部署保留 VPS 控制台\n   和管理员 SSH，直到第 4 步建立第一条 SSH SOCKS 海外路径。\n3. 在 VPS 建立 WireGuard 服务端与这台 Mac 的独立 Peer。\n4. 先建立 `127.0.0.1:7898` 的 SSH SOCKS，确认真实 HTTPS 请求成功。\n5. 把 WireGuard 私钥放进 Mihomo home 内权限为 `0600` 的私密 provider。\n6. 根据 [公开 profile 模板](examples/clash-split.example.yaml) 推导物理\n   接口和 route exclusions；不要复制别人的 VPS、DNS 或局域网值。\n7. 导入副本 profile，使用"
+    },
+    {
+      "id": "gh-readme-macos-clash-wireguard-split-guide-3#1",
+      "title": "macos-clash-wireguard-split-guide README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/macos-clash-wireguard-split-guide#readme",
+      "text": "公开 profile 模板](examples/clash-split.example.yaml) 推导物理\n   接口和 route exclusions；不要复制别人的 VPS、DNS 或局域网值。\n7. 导入副本 profile，使用 `Rule`，同时开启 System Proxy 与 TUN。\n8. 按 [验收清单](docs/verification.md) 检查入口、路由、DNS、规则、主备、\n   WebRTC/STUN、IPv4/IPv"
+    },
+    {
+      "id": "gh-readme-macos-clash-wireguard-split-guide-4#0",
+      "title": "macos-clash-wireguard-split-guide README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/macos-clash-wireguard-split-guide#readme",
+      "text": "macos-clash-wireguard-split-guide\nmacOS 上使用 Clash Verge Rev、Mihomo、WireGuard 与 SSH 备用通道实现国内直连、国外 VPS 分流的可复现指南\nprofile，使用 `Rule`，同时开启 System Proxy 与 TUN。\n8. 按 [验收清单](docs/verification.md) 检查入口、路由、DNS、规则、主备、\n   WebRTC/STUN、IPv4/IPv6 与性能。\n\n公共模板中的 `REPLACE_WITH_...`、`example.com` 和示例接口都必须在私密\n副本中替换；真实副本不得提交到 Git。\n\n公开模板已把两个 provider 的持续健康检查设为 `enable: true`、\n`lazy: false`，并把 fallback 失败门槛设为 2。当前机器仍运行旧 profile\n中的遗留健康检查值；本次重写没有把公开模板静默部署到当前运行态。\n\n## 两个不能混淆的目标\n\n### 分流模式：本仓库主线\n\n- 国内目标走物理网络，速度和区域兼容性优先。\n- 海外目标与被 TUN 捕获的 STUN/UDP 走 VPS WireGuard。\n- 中国检测站若命中国内规则，看到中国出口属于设计结果。\n\n### 单一出口模式：另一种策略\n\n- 所有公网目标都走 VPS，出口一致性优先。\n- 需要删掉或收窄公网 DIRECT 规则和公网 route exclusions。\n- 国内访问不再保证直连性能。\n\n给某个 IP 检测域名单独加 `PROXY` 规则，只改变该"
+    },
+    {
+      "id": "gh-readme-macos-clash-wireguard-split-guide-4#1",
+      "title": "macos-clash-wireguard-split-guide README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/macos-clash-wireguard-split-guide#readme",
+      "text": "一种策略\n\n- 所有公网目标都走 VPS，出口一致性优先。\n- 需要删掉或收窄公网 DIRECT 规则和公网 route exclusions。\n- 国内访问不再保证直连性能。\n\n给某个 IP 检测域名单独加 `PROXY` 规则，只改变该站点，不会把分流模式\n变成单一出口模式，也不能用来证明匿名。\n\n## WebRTC、DNS 与 fallback 的边界\n\n- 经典系统代理可能被 WebRTC 的 STUN UDP 绕过；本方案用 TUN 从更底层"
+    },
+    {
+      "id": "gh-readme-macos-clash-wireguard-split-guide-5#0",
+      "title": "macos-clash-wireguard-split-guide README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/macos-clash-wireguard-split-guide#readme",
+      "text": "macos-clash-wireguard-split-guide\nmacOS 上使用 Clash Verge Rev、Mihomo、WireGuard 与 SSH 备用通道实现国内直连、国外 VPS 分流的可复现指南\nXY` 规则，只改变该站点，不会把分流模式\n变成单一出口模式，也不能用来证明匿名。\n\n## WebRTC、DNS 与 fallback 的边界\n\n- 经典系统代理可能被 WebRTC 的 STUN UDP 绕过；本方案用 TUN 从更底层\n  扩大覆盖。raw STUN 脚本不等于浏览器 WebRTC/ICE 验收，两者都不能只看\n  开关。\n- `dns-hijack` 把匹配的 UDP/TCP DNS 导入 Mihomo，不等于自动接管任意\n  DoH、DoT、局域网 DNS 或 Bonjour/mDNS。\n- profile DNS 与 Clash Verge 全局 DNS 覆写必须只有一个配置所有者。\n- `route-exclude-address` 会让目标绕过 TUN。只排除确需直连的物理 LAN、\n  VPS underlay 和直连 DNS，并逐项验证。\n- WireGuard 主节点支持 UDP；SSH SOCKS 备用仅支持 TCP。主节点故障时，\n  UDP 可能失败，fallback 不保证同一个失败请求透明重试。\n- WireGuard 与 SSH 共用同一台 VPS，不能覆盖 VPS 整机、账号、主机商或\n  上游共同故障。\n\n## 验收不是看一个绿灯\n\n至少确认：\n\n- controller 返回 `mode=rule`、TUN"
+    },
+    {
+      "id": "gh-readme-macos-clash-wireguard-split-guide-5#1",
+      "title": "macos-clash-wireguard-split-guide README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/macos-clash-wireguard-split-guide#readme",
+      "text": "请求透明重试。\n- WireGuard 与 SSH 共用同一台 VPS，不能覆盖 VPS 整机、账号、主机商或\n  上游共同故障。\n\n## 验收不是看一个绿灯\n\n至少确认：\n\n- controller 返回 `mode=rule`、TUN 开、`auto-route=true`。\n- macOS HTTP/HTTPS 系统代理指向活动 mixed listener。\n- 普通公网 IPv4 路由进入 TUN；被排除的 LAN/DNS/VPS underla"
+    },
+    {
+      "id": "gh-readme-macos-clash-wireguard-split-guide-6#0",
+      "title": "macos-clash-wireguard-split-guide README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/macos-clash-wireguard-split-guide#readme",
+      "text": "macos-clash-wireguard-split-guide\nmacOS 上使用 Clash Verge Rev、Mihomo、WireGuard 与 SSH 备用通道实现国内直连、国外 VPS 分流的可复现指南\nrule`、TUN 开、`auto-route=true`。\n- macOS HTTP/HTTPS 系统代理指向活动 mixed listener。\n- 普通公网 IPv4 路由进入 TUN；被排除的 LAN/DNS/VPS underlay 走物理\n  接口。\n- 国内与海外请求交错重复，实际规则命中符合预期。\n- WireGuard 与 SSH 分别真实可用；WireGuard handshake 和 transfer\n  counters 在真实请求后更新。\n- 假故障演练后，新 TCP 连接切到 SSH；恢复后回到 WireGuard。\n- 两个独立 raw STUN IPv4 目标不显示本地 ISP 公网 IPv4；当前 Chrome\n  复核也通过，但实际发生问题的其他浏览器或 WebView 仍要单独测试。\n- Mihomo IPv6、系统全局 IPv6 route 与浏览器 candidate 被分开记录；\n  网络或配置变化后重新验收。\n- TUN A/B 没有新增失败或超过预设性能门槛。\n\n诊断脚本只读系统与 Mihomo 状态，但会发送少量真实请求：\n\n```bash\nNETWORK_SERVICE=\"Wi-Fi\" zsh scripts/diagnose.zsh\n```\n\n主动候选探测会更新健康历史，只在保存故障现场后使用：\n\n```ba"
+    },
+    {
+      "id": "gh-readme-macos-clash-wireguard-split-guide-6#1",
+      "title": "macos-clash-wireguard-split-guide README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/macos-clash-wireguard-split-guide#readme",
+      "text": "与 Mihomo 状态，但会发送少量真实请求：\n\n```bash\nNETWORK_SERVICE=\"Wi-Fi\" zsh scripts/diagnose.zsh\n```\n\n主动候选探测会更新健康历史，只在保存故障现场后使用：\n\n```bash\nACTIVE_NODE_PROBES=1 NETWORK_SERVICE=\"Wi-Fi\" zsh scripts/diagnose.zsh\n```\n\n需要比较显式代理、无显式 HTTP proxy 的请求和两个 r"
+    },
+    {
+      "id": "gh-readme-macos-clash-wireguard-split-guide-7#0",
+      "title": "macos-clash-wireguard-split-guide README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/macos-clash-wireguard-split-guide#readme",
+      "text": "macos-clash-wireguard-split-guide\nmacOS 上使用 Clash Verge Rev、Mihomo、WireGuard 与 SSH 备用通道实现国内直连、国外 VPS 分流的可复现指南\n使用：\n\n```bash\nACTIVE_NODE_PROBES=1 NETWORK_SERVICE=\"Wi-Fi\" zsh scripts/diagnose.zsh\n```\n\n需要比较显式代理、无显式 HTTP proxy 的请求和两个 raw STUN IPv4 出口时：\n\n```bash\nSTUN_PROBES=1 NETWORK_SERVICE=\"Wi-Fi\" zsh scripts/diagnose.zsh\n```\n\n这会向公共 IP 回显与 STUN 服务发送请求；脚本只报告是否一致，不打印实际\n出口 IP。结果不能代替浏览器 WebRTC/ICE candidate 检查。\n\n输出可能包含网关、接口和网络结构，公开分享前按\n[安全说明](SECURITY.md) 脱敏。\n\n## 仓库内容\n\n- [架构与边界](docs/architecture.md)\n- [VPS 购买](docs/vps-purchase.md)\n- [VPS 服务端配置](docs/server-setup.md)\n- [macOS 客户端安装](docs/setup.md)\n- [验收与性能基线](docs/verification.md)\n- [排障矩阵](docs/troubleshooting.md)\n- [迁移与事故记录](docs/history/migration"
+    },
+    {
+      "id": "gh-readme-macos-clash-wireguard-split-guide-7#1",
+      "title": "macos-clash-wireguard-split-guide README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/macos-clash-wireguard-split-guide#readme",
+      "text": "装](docs/setup.md)\n- [验收与性能基线](docs/verification.md)\n- [排障矩阵](docs/troubleshooting.md)\n- [迁移与事故记录](docs/history/migration-and-incidents.md)\n- [智能体协作手册](docs/agent-runbook.md)\n- [Mihomo profile 模板](examples/clash-split.example.yaml)"
+    },
+    {
+      "id": "gh-readme-macos-clash-wireguard-split-guide-8",
+      "title": "macos-clash-wireguard-split-guide README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/macos-clash-wireguard-split-guide#readme",
+      "text": "macos-clash-wireguard-split-guide\nmacOS 上使用 Clash Verge Rev、Mihomo、WireGuard 与 SSH 备用通道实现国内直连、国外 VPS 分流的可复现指南\n/migration-and-incidents.md)\n- [智能体协作手册](docs/agent-runbook.md)\n- [Mihomo profile 模板](examples/clash-split.example.yaml)\n- [WireGuard provider 模板](examples/providers/wireguard-private.example.yaml)\n- [客户端诊断](scripts/diagnose.zsh)\n- [HTTP 性能 A/B runner](scripts/benchmark-http.zsh)\n- [VPS 诊断](scripts/diagnose-server.sh)\n- [离线仓库校验](scripts/validate-repo.sh)\n- [证据来源](SOURCES.md)\n- [公开安全边界](SECURITY.md)\n\n运行仓库检查：\n\n```bash\nbash scripts/test-validate-repo.sh\nbash scripts/validate-repo.sh\n```\n\n静态 CI 只能证明公开文件、结构与安全扫描通过，不能代替目标机器的端到端\n网络验收。"
+    },
+    {
+      "id": "gh-repo-shanghai-red-landmarks-app",
+      "title": "shanghai-red-landmarks-app",
+      "source": "github",
+      "url": "https://github.com/NafYoung/shanghai-red-landmarks-app",
+      "text": "仓库：NafYoung/shanghai-red-landmarks-app\n上海红色景点可视化 — 纯原生 JS 地图应用，含路线规划、全景/3D 场景、分享海报\n语言：JavaScript\n主页：https://nafyoung.github.io/shanghai-red-landmarks-app/\nTopics：github-pages, javascript, leaflet, map-visualization, portfolio-project, red-tourism, route-planning, shanghai, static-site, tourism"
+    },
+    {
+      "id": "gh-readme-shanghai-red-landmarks-app-0#0",
+      "title": "shanghai-red-landmarks-app README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/shanghai-red-landmarks-app#readme",
+      "text": "shanghai-red-landmarks-app\n上海红色景点可视化 — 纯原生 JS 地图应用，含路线规划、全景/3D 场景、分享海报\n# 上海红色景点可视化 App\n\n[![Deploy to GitHub Pages](https://github.com/NafYoung/shanghai-red-landmarks-app/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/NafYoung/shanghai-red-landmarks-app/actions/workflows/deploy-pages.yml)\n\n一个纯前端静态网页应用，用地图可视化上海红色景点（含四行仓库），并支持筛选、路线高亮和时间线浏览。\n\n**在线演示**：https://nafyoung.github.io/shanghai-red-landmarks-app/\n\n![上海红色景点可视化预览](docs/preview.png)\n\n## 项目亮点\n\n- 面向红色文旅路线浏览场景，整合景点筛选、地图定位、路线规划和分享海报。\n- 无后端依赖，GitHub Pages 可直接托管，适合作为轻量文旅可视化 Demo。\n- 已补充键盘可访问性、路线缓存、性能复测和 Playwright smoke 验证说明。\n\n## 功能\n\n- 地图标注上海红色景点，点击查看简介\n- 免费高清底图（默认高清街道图，可切换标准街道图）\n- 地图加入“上海边界遮罩 + 硬限制”，拖拽/缩放不会离开上海\n- 点击任意景点可联动显示该地"
+    },
+    {
+      "id": "gh-readme-shanghai-red-landmarks-app-0#1",
+      "title": "shanghai-red-landmarks-app README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/shanghai-red-landmarks-app#readme",
+      "text": "ight smoke 验证说明。\n\n## 功能\n\n- 地图标注上海红色景点，点击查看简介\n- 免费高清底图（默认高清街道图，可切换标准街道图）\n- 地图加入“上海边界遮罩 + 硬限制”，拖拽/缩放不会离开上海\n- 点击任意景点可联动显示该地点场景：优先全景，失败自动回退到 3D 地图\n- 3D 视图按景点馆址坐标校准并使用独立相机参数，定位更贴近真实馆址\n- 点击景点时会在 Ar"
+    },
+    {
+      "id": "gh-readme-shanghai-red-landmarks-app-1#0",
+      "title": "shanghai-red-landmarks-app README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/shanghai-red-landmarks-app#readme",
+      "text": "shanghai-red-landmarks-app\n上海红色景点可视化 — 纯原生 JS 地图应用，含路线规划、全景/3D 场景、分享海报\n- 地图加入“上海边界遮罩 + 硬限制”，拖拽/缩放不会离开上海\n- 点击任意景点可联动显示该地点场景：优先全景，失败自动回退到 3D 地图\n- 3D 视图按景点馆址坐标校准并使用独立相机参数，定位更贴近真实馆址\n- 点击景点时会在 ArcGIS 建筑图层中锁定最近建筑并高亮，3D 观察目标更准确\n- 关键词搜索（名称 / 简介 / 关键词）\n- 按行政区、类型筛选\n- 推荐路线一键高亮（建党初心线 / 抗战记忆线 / 城市人文线）\n- 点击路线自动生成打卡顺序（到达/离开时间）与预计总用时\n- 每段路线并排展示四种方式：`步行 / 骑行 / 地铁 / 驾车`\n- 驾车时长优先使用高德实时路况（需配置 Key），失败自动回退模型估算\n- 步行/骑行/地铁时长为稳定模型估算，并统一基于同一路段距离计算\n- 键盘可访问：景点卡片/路线步骤支持 `Tab + Enter/Space`，海报弹窗支持 `Esc` 关闭与焦点循环\n- 一键转发：系统分享或复制当前页面链接（含筛选/路线状态）\n- 一键生成分享海报（内含二维码 + 路线摘要），适合发微信好友\n- 每个标点展示具体地址与详细介绍\n- 景点列表与地图联动定位\n- 历史时间线自动排序展示\n- 桌面端和移动端自适应\n\n## 数据校验\n\n- 最近一次景点地址与馆点信息人工核验：2026-02-12（以上海官方馆方/政府/文旅来源为主）。\n- 最近一次景点坐标与 3D 视角参数校准：2026-02"
+    },
+    {
+      "id": "gh-readme-shanghai-red-landmarks-app-1#1",
+      "title": "shanghai-red-landmarks-app README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/shanghai-red-landmarks-app#readme",
+      "text": "定位\n- 历史时间线自动排序展示\n- 桌面端和移动端自适应\n\n## 数据校验\n\n- 最近一次景点地址与馆点信息人工核验：2026-02-12（以上海官方馆方/政府/文旅来源为主）。\n- 最近一次景点坐标与 3D 视角参数校准：2026-02-12。\n\n## 免费方案说明\n\n- 当前版本不需要 Apple Developer Program，不需要任何付费账号。\n- 直接打开网页"
+    },
+    {
+      "id": "gh-readme-shanghai-red-landmarks-app-2#0",
+      "title": "shanghai-red-landmarks-app README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/shanghai-red-landmarks-app#readme",
+      "text": "shanghai-red-landmarks-app\n上海红色景点可视化 — 纯原生 JS 地图应用，含路线规划、全景/3D 场景、分享海报\n（以上海官方馆方/政府/文旅来源为主）。\n- 最近一次景点坐标与 3D 视角参数校准：2026-02-12。\n\n## 免费方案说明\n\n- 当前版本不需要 Apple Developer Program，不需要任何付费账号。\n- 直接打开网页即可加载地图与标点，不需要配置 token。\n\n## 运行方式\n\n1. 克隆仓库并进入目录：\n\n```bash\ngit clone https://github.com/NafYoung/shanghai-red-landmarks-app.git\ncd shanghai-red-landmarks-app\n```\n\n2. 启动本地静态服务（推荐）：\n\n```bash\npython3 -m http.server 5173\n```\n\n3. 浏览器打开：\n\n```text\nhttp://localhost:5173\n```\n\n4. （可选）配置实时路况/街景 Key：\n\n```bash\ncp config/runtime-config.example.js config/runtime-config.js\n```\n\n然后编辑 `config/runtime-config.js`：\n\n```js\nwindow.RUNTIME_CONFIG = {\n  amapKey: \"你的高德 Web Service Key\",\n  baiduAk: \"你的百度街景 AK\"\n};\n```\n\n说明：Key 走前端公开模式，"
+    },
+    {
+      "id": "gh-readme-shanghai-red-landmarks-app-2#1",
+      "title": "shanghai-red-landmarks-app README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/shanghai-red-landmarks-app#readme",
+      "text": ".js`：\n\n```js\nwindow.RUNTIME_CONFIG = {\n  amapKey: \"你的高德 Web Service Key\",\n  baiduAk: \"你的百度街景 AK\"\n};\n```\n\n说明：Key 走前端公开模式，请务必在对应平台设置域名白名单。\n\n也可以直接双击 `index.html` 打开，但地图瓦片在某些浏览器设置下可能受限制，建议使用本地服务。"
+    },
+    {
+      "id": "gh-readme-shanghai-red-landmarks-app-3#0",
+      "title": "shanghai-red-landmarks-app README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/shanghai-red-landmarks-app#readme",
+      "text": "shanghai-red-landmarks-app\n上海红色景点可视化 — 纯原生 JS 地图应用，含路线规划、全景/3D 场景、分享海报\n\",\n  baiduAk: \"你的百度街景 AK\"\n};\n```\n\n说明：Key 走前端公开模式，请务必在对应平台设置域名白名单。\n\n也可以直接双击 `index.html` 打开，但地图瓦片在某些浏览器设置下可能受限制，建议使用本地服务。\n\n## E2E 自动化验证\n\n项目已内置 Playwright 配置（无头 Chromium，自动启动本地静态服务）：\n\n1. 首次安装依赖：\n\n```bash\nnpm install\n```\n\n2. 首次安装浏览器：\n\n```bash\nnpm run test:e2e:install\n```\n\n3. 运行 E2E smoke：\n\n```bash\nnpm run test:e2e\n```\n\n可选：本地可视化调试\n\n```bash\nnpm run test:e2e:headed\n# 或\nnpm run test:e2e:ui\n```\n\n新增准确性用例覆盖：\n\n- 上海边界限制（越界参数收敛）\n- 路线四方式展示完整性\n- 全景失败自动回退到 3D\n\n## 键盘操作说明\n\n- 使用 `Tab / Shift + Tab` 在筛选项、景点卡片、路线按钮和弹窗按钮之间切换焦点。\n- 在景点卡片和路线步骤上按 `Enter` 或 `Space` 可触发地图定位。\n- 海报弹窗打开后，焦点会自动进入弹窗；按 `Esc` 可关闭，关闭后焦点会返回触发按钮。\n\n## 路线缓存策略\n\n- 路线分段结果会写入 `loca"
+    },
+    {
+      "id": "gh-readme-shanghai-red-landmarks-app-3#1",
+      "title": "shanghai-red-landmarks-app README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/shanghai-red-landmarks-app#readme",
+      "text": "点。\n- 在景点卡片和路线步骤上按 `Enter` 或 `Space` 可触发地图定位。\n- 海报弹窗打开后，焦点会自动进入弹窗；按 `Esc` 可关闭，关闭后焦点会返回触发按钮。\n\n## 路线缓存策略\n\n- 路线分段结果会写入 `localStorage`，键名：`shanghai-red-landmarks-drive-traffic-v1`。\n- 缓存按路段键（`fromI"
+    },
+    {
+      "id": "gh-readme-shanghai-red-landmarks-app-4#0",
+      "title": "shanghai-red-landmarks-app README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/shanghai-red-landmarks-app#readme",
+      "text": "shanghai-red-landmarks-app\n上海红色景点可视化 — 纯原生 JS 地图应用，含路线规划、全景/3D 场景、分享海报\n` 可关闭，关闭后焦点会返回触发按钮。\n\n## 路线缓存策略\n\n- 路线分段结果会写入 `localStorage`，键名：`shanghai-red-landmarks-drive-traffic-v1`。\n- 缓存按路段键（`fromId->toId`）存储，字段包含：`distanceMeters`、`walkMinutes`、`bikeMinutes`、`metroMinutes`、`driveMinutes`、`driveTrafficLevel`、`updatedAt`、`expiresAt`。\n- 驾车实时路况缓存 TTL 为 `5 分钟`；步行/骑行/地铁模型缓存 TTL 为 `24 小时`。\n- 最大缓存条目数为 300，超出后自动按最近更新时间清理。\n- 若浏览器禁用或限制 `localStorage`（如隐私模式），会自动降级为仅内存缓存，不影响页面使用。\n- 场景模式偏好会写入 `shanghai-red-landmarks-panorama-pref-v1`。\n\n## 性能说明\n\n- 搜索输入使用 `180ms` 防抖，减少高频重绘。\n- 地图标点采用按 `spotId` 的差量更新，避免每次筛选全量重建 marker。\n- 路线路网校正数据回填后仅刷新路线相关区域（路线卡片/计划/提示/里程），不触发全页重绘。\n- 上海边界使用简化 GeoJSON，兼顾边界精度与移动端性能。\n\n## 准确性体检脚本\n\n执行："
+    },
+    {
+      "id": "gh-readme-shanghai-red-landmarks-app-4#1",
+      "title": "shanghai-red-landmarks-app README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/shanghai-red-landmarks-app#readme",
+      "text": "量更新，避免每次筛选全量重建 marker。\n- 路线路网校正数据回填后仅刷新路线相关区域（路线卡片/计划/提示/里程），不触发全页重绘。\n- 上海边界使用简化 GeoJSON，兼顾边界精度与移动端性能。\n\n## 准确性体检脚本\n\n执行：\n\n```bash\nnode scripts/audit-accuracy.js\n```\n\n输出：\n\n- 报告文件：`reports/accur"
+    },
+    {
+      "id": "gh-readme-shanghai-red-landmarks-app-5#0",
+      "title": "shanghai-red-landmarks-app README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/shanghai-red-landmarks-app#readme",
+      "text": "shanghai-red-landmarks-app\n上海红色景点可视化 — 纯原生 JS 地图应用，含路线规划、全景/3D 场景、分享海报\n上海边界使用简化 GeoJSON，兼顾边界精度与移动端性能。\n\n## 准确性体检脚本\n\n执行：\n\n```bash\nnode scripts/audit-accuracy.js\n```\n\n输出：\n\n- 报告文件：`reports/accuracy-audit.md`\n- 固定字段：`spotId`、`coordStatus`、`boundaryStatus`、`routeLegStatus`、`driveTrafficSource`、`panoramaSource`、`fallbackReason`\n\n脚本会在有 Key 时统计实时路况命中率；无 Key 时会明确标记降级状态。\n\n## 交通估时参数面板（实验）\n\n- 在筛选区展开 `交通估时参数（实验）` 可调节步行/地铁/打车等模型参数。\n- 参数变更后会自动重算路线时长并刷新路线区块，无需刷新页面。\n- 参数会保存到当前浏览器本地（`localStorage`），下次打开会自动恢复。\n- 点击 `恢复默认参数` 可一键回到默认模型。\n\n默认参数：\n\n- 步行速度 `4.8 km/h`，步行缓冲 `2 分钟`\n- 地铁速度 `26 km/h`，地铁缓冲 `14 分钟`\n- 地铁+步行速度 `23 km/h`，地铁+步行缓冲 `16 分钟`\n- 打车速度 `30 km/h`，打车缓冲 `10 分钟`\n- 打车引擎放大系数 `1.35`，打车额外分钟 `4`\n\n## P0 回归验证清单\n\n建"
+    },
+    {
+      "id": "gh-readme-shanghai-red-landmarks-app-5#1",
+      "title": "shanghai-red-landmarks-app README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/shanghai-red-landmarks-app#readme",
+      "text": "`14 分钟`\n- 地铁+步行速度 `23 km/h`，地铁+步行缓冲 `16 分钟`\n- 打车速度 `30 km/h`，打车缓冲 `10 分钟`\n- 打车引擎放大系数 `1.35`，打车额外分钟 `4`\n\n## P0 回归验证清单\n\n建议在桌面浏览器和移动端（或设备模拟）各执行一遍：\n\n- 键盘可达：\n  - `Tab` 可依次聚焦搜索、筛选、景点卡片、路线按钮、海报弹窗按"
+    },
+    {
+      "id": "gh-readme-shanghai-red-landmarks-app-6#0",
+      "title": "shanghai-red-landmarks-app README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/shanghai-red-landmarks-app#readme",
+      "text": "shanghai-red-landmarks-app\n上海红色景点可视化 — 纯原生 JS 地图应用，含路线规划、全景/3D 场景、分享海报\n分钟`\n- 打车引擎放大系数 `1.35`，打车额外分钟 `4`\n\n## P0 回归验证清单\n\n建议在桌面浏览器和移动端（或设备模拟）各执行一遍：\n\n- 键盘可达：\n  - `Tab` 可依次聚焦搜索、筛选、景点卡片、路线按钮、海报弹窗按钮。\n  - 在景点卡片和路线步骤上按 `Enter/Space` 会触发地图定位。\n- 弹窗焦点：\n  - 点击 `生成分享海报` 后焦点自动进入弹窗。\n  - 弹窗内 `Tab/Shift+Tab` 焦点不逃逸；按 `Esc` 能关闭。\n  - 关闭后焦点回到触发按钮。\n- 输入性能：\n  - 连续输入约 10 个字符，页面无明显卡顿和“整页闪动”。\n- 地图渲染：\n  - 切换筛选和路线时 marker 无明显闪烁，且无法拖出上海边界。\n  - 已有 marker 不重复创建，选中点 popup 状态正确。\n- 路线四方式：\n  - 每段必须出现步行/骑行/地铁/驾车 4 行时长与来源。\n- 全景回退：\n  - 全景加载失败时出现统一文案：`暂无全景，已自动切换到3D地图视图`。\n- 缓存持久化：\n  - 首次进入路线会发起路网数据请求。\n  - 刷新后同一路线优先命中缓存（在 TTL 内）。\n  - 手动禁用 `localStorage` 后功能仍可用（仅失去持久缓存）。\n- 稳定性回归：\n  - 分享链接、URL 状态恢复、3D 场景切换、海报下载行为正常。\n\n## 性能复测方法\n\n统一条件：同"
+    },
+    {
+      "id": "gh-readme-shanghai-red-landmarks-app-6#1",
+      "title": "shanghai-red-landmarks-app README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/shanghai-red-landmarks-app#readme",
+      "text": "先命中缓存（在 TTL 内）。\n  - 手动禁用 `localStorage` 后功能仍可用（仅失去持久缓存）。\n- 稳定性回归：\n  - 分享链接、URL 状态恢复、3D 场景切换、海报下载行为正常。\n\n## 性能复测方法\n\n统一条件：同一台机器、同一浏览器、同一网络、同一窗口尺寸。\n\n1. 启动本地服务并打开页面。\n2. 打开浏览器开发者工具 `Performance` 面"
+    },
+    {
+      "id": "gh-readme-shanghai-red-landmarks-app-7#0",
+      "title": "shanghai-red-landmarks-app README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/shanghai-red-landmarks-app#readme",
+      "text": "shanghai-red-landmarks-app\n上海红色景点可视化 — 纯原生 JS 地图应用，含路线规划、全景/3D 场景、分享海报\n分享链接、URL 状态恢复、3D 场景切换、海报下载行为正常。\n\n## 性能复测方法\n\n统一条件：同一台机器、同一浏览器、同一网络、同一窗口尺寸。\n\n1. 启动本地服务并打开页面。\n2. 打开浏览器开发者工具 `Performance` 面板，关闭不必要扩展。\n3. 录制场景 A（搜索）：\n   - 在搜索框内连续输入 10 个字符（例如“中共会址纪念馆”）。\n   - 记录从首字符输入到主线程恢复平稳的大致耗时。\n4. 录制场景 B（路线切换）：\n   - 点击“查看路线”，等待路线提示从加载态稳定。\n   - 记录路线点击到界面稳定更新的大致耗时。\n5. 每个场景重复 3 次，取中位数，写入下表。\n\n### 性能记录模板\n\n| 场景 | 优化前中位数(ms) | 优化后中位数(ms) | 说明 |\n| --- | ---: | ---: | --- |\n| 搜索输入首帧响应 |  |  | 连续输入 10 字符 |\n| 路线切换完成时间 |  |  | 含路线信息稳定展示 |\n\n## 分享说明\n\n- 点击页面上的 `转发给朋友` 可直接调用系统分享（支持时）或自动复制链接。\n- 点击 `生成分享海报` 可导出二维码海报，适合微信图片分享。\n- 链接会包含当前筛选、选中路线和地图视角，朋友打开后可还原同一视图。\n- URL 参数保持向后兼容，新增可选参数 `sceneMode=panorama|scene3d`（缺省为 `panoram"
+    },
+    {
+      "id": "gh-readme-shanghai-red-landmarks-app-7#1",
+      "title": "shanghai-red-landmarks-app README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/shanghai-red-landmarks-app#readme",
+      "text": "` 可导出二维码海报，适合微信图片分享。\n- 链接会包含当前筛选、选中路线和地图视角，朋友打开后可还原同一视图。\n- URL 参数保持向后兼容，新增可选参数 `sceneMode=panorama|scene3d`（缺省为 `panorama`）。\n- 如果你分享的是 `localhost` 链接，朋友通常无法直接访问；需要把项目部署到可公网访问地址后再分享。\n\n## GitHu"
+    },
+    {
+      "id": "gh-readme-shanghai-red-landmarks-app-8",
+      "title": "shanghai-red-landmarks-app README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/shanghai-red-landmarks-app#readme",
+      "text": "shanghai-red-landmarks-app\n上海红色景点可视化 — 纯原生 JS 地图应用，含路线规划、全景/3D 场景、分享海报\n，新增可选参数 `sceneMode=panorama|scene3d`（缺省为 `panorama`）。\n- 如果你分享的是 `localhost` 链接，朋友通常无法直接访问；需要把项目部署到可公网访问地址后再分享。\n\n## GitHub Pages 部署（推荐稳定分享）\n\n项目已内置 GitHub Pages 自动发布工作流：`.github/workflows/deploy-pages.yml`\n\n当前仓库已启用 GitHub Pages，线上地址：\n\n```text\nhttps://nafyoung.github.io/shanghai-red-landmarks-app/\n```\n\n如果 fork 或迁移到新仓库，可在本地执行：\n\n```bash\ncd shanghai-red-landmarks-app\n./publish-github-pages.sh https://github.com/<你的GitHub用户名>/<仓库名>.git\n```\n\n首次发布后，到仓库 `Settings -> Pages` 检查 Source 是否为 `GitHub Actions`。等待 Actions 运行完成后，访问：\n\n```text\nhttps://<你的GitHub用户名>.github.io/<仓库名>/\n```"
+    },
+    {
+      "id": "gh-repo-meituan-ai-challenge",
+      "title": "meituan-ai-challenge",
+      "source": "github",
+      "url": "https://github.com/NafYoung/meituan-ai-challenge",
+      "text": "仓库：NafYoung/meituan-ai-challenge\n美团 AI Hackathon 2026 赛题 06：本地生活短时活动规划与执行 Agent。\n语言：Python\n主页：https://github.com/NafYoung/meituan-ai-challenge\nTopics：ai-agent, hackathon, local-life, planning-agent, streamlit"
+    },
+    {
+      "id": "gh-readme-meituan-ai-challenge-0#0",
+      "title": "meituan-ai-challenge README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/meituan-ai-challenge#readme",
+      "text": "meituan-ai-challenge\n美团 AI Hackathon 2026 赛题 06：本地生活短时活动规划与执行 Agent。\n# 美团 AI Hackathon 2026 · 赛题 06\n\n## 本地探索：周末闲时活动规划\n\n本项目实现一个本地生活短时活动规划与执行 Agent。用户输入一句自然语言目标，例如“今天下午想和老婆孩子出去玩几个小时，别离家太远，孩子 5 岁，老婆最近在减肥”，系统会自动完成约束解析、POI/餐厅/活动/配送搜索、时间线编排、分享文案生成，并在用户确认后模拟完成购票、排号、配送等关键动作。\n\n## 核心能力\n\n- 12 维约束解析：场景、人数、饮食禁忌、儿童年龄、时间窗口、截止时间、距离、预算、场合、活动偏好、配送需求、团购优先。\n- 10 个本地生活 Tool：POI、餐厅、排队、活动、配送、团购、购票、订座、配送下单等。\n- 双规划模式：Demo 规则引擎离线可跑；DeepSeek/OpenAI/Claude 使用 Function Calling 调工具。\n- 可执行闭环：方案确认后生成购票、餐厅预订/排号、鲜花/蛋糕配送等模拟订单。\n- 两种交互入口：CLI 和 Streamlit Web UI。\n- Hard Case 评测：覆盖预算、多人饮食冲突、团建、极短时间窗口、团购等 10 个场景。\n\n## 快速运行\n\n```bash\n# 安装依赖\npip install -r requirements.txt\n\n# Web UI（推荐演示）\nstreamlit run app.py\n\n# CLI Demo（无需 API Key）\npy"
+    },
+    {
+      "id": "gh-readme-meituan-ai-challenge-0#1",
+      "title": "meituan-ai-challenge README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/meituan-ai-challenge#readme",
+      "text": "## 快速运行\n\n```bash\n# 安装依赖\npip install -r requirements.txt\n\n# Web UI（推荐演示）\nstreamlit run app.py\n\n# CLI Demo（无需 API Key）\npython main.py\n\n# 一键演示\nbash demo.sh\n\n# 评测\npython eval.py\n```\n\nLLM 模式需要自"
+    },
+    {
+      "id": "gh-readme-meituan-ai-challenge-1#0",
+      "title": "meituan-ai-challenge README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/meituan-ai-challenge#readme",
+      "text": "meituan-ai-challenge\n美团 AI Hackathon 2026 赛题 06：本地生活短时活动规划与执行 Agent。\n演示）\nstreamlit run app.py\n\n# CLI Demo（无需 API Key）\npython main.py\n\n# 一键演示\nbash demo.sh\n\n# 评测\npython eval.py\n```\n\nLLM 模式需要自行配置环境变量，例如：\n\n```bash\nexport DEEPSEEK_API_KEY=your_key\npython main.py --mode deepseek\n```\n\n## 项目结构\n\n```text\n├── app.py            # Streamlit Web UI\n├── main.py           # CLI 交互入口\n├── planner.py        # ReAct 控制器 + Demo 规则规划器\n├── tools.py          # 10 个核心 Tool\n├── mock_data.py      # 本地 Mock 数据与订单存储\n├── eval.py           # 10 个 Hard Case 评测套件\n├── compare.py        # Demo vs DeepSeek 对比评测\n├── DESIGN.md         # 提交版设计文档\n├── PRD.md            # 产品需求说明\n├── index.html        # 技术方案展示页\n└── demo.sh"
+    },
+    {
+      "id": "gh-readme-meituan-ai-challenge-1#1",
+      "title": "meituan-ai-challenge README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/meituan-ai-challenge#readme",
+      "text": "评测\n├── DESIGN.md         # 提交版设计文档\n├── PRD.md            # 产品需求说明\n├── index.html        # 技术方案展示页\n└── demo.sh           # 一键演示脚本\n```\n\n## 评测结果\n\n```text\n36/36 (100%) — 10 个 hard case\nmedium:"
+    },
+    {
+      "id": "gh-readme-meituan-ai-challenge-2",
+      "title": "meituan-ai-challenge README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/meituan-ai-challenge#readme",
+      "text": "meituan-ai-challenge\n美团 AI Hackathon 2026 赛题 06：本地生活短时活动规划与执行 Agent。\nindex.html        # 技术方案展示页\n└── demo.sh           # 一键演示脚本\n```\n\n## 评测结果\n\n```text\n36/36 (100%) — 10 个 hard case\nmedium: 18/18 (100%) | hard: 18/18 (100%)\n```\n\n## 典型演示输入\n\n```text\n今天下午是空的，想和老婆孩子出去玩几个小时，别离家太远，孩子5岁，老婆最近在减肥\n```\n\n```text\n团队8个人下午团建，预算人均150，要有活动有晚饭。有人不吃辣，有人恐高\n```\n\n```text\n结婚纪念日，晚上想给老婆一个惊喜，要有鲜花、蛋糕，吃顿好的，但老婆最近只吃素食\n```"
+    },
+    {
+      "id": "gh-repo-mcn-script-assistant",
+      "title": "mcn-script-assistant",
+      "source": "github",
+      "url": "https://github.com/NafYoung/mcn-script-assistant",
+      "text": "仓库：NafYoung/mcn-script-assistant\nMCN 商单脚本生成助手：从品牌 brief 到飞书文档的 AI 全流程自动化。\n语言：Python\n主页：https://github.com/NafYoung/mcn-script-assistant\nTopics：ai-agent, feishu, mcn, script-generation, xiaohongshu"
+    },
+    {
+      "id": "gh-readme-mcn-script-assistant-0#0",
+      "title": "mcn-script-assistant README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/mcn-script-assistant#readme",
+      "text": "mcn-script-assistant\nMCN 商单脚本生成助手：从品牌 brief 到飞书文档的 AI 全流程自动化。\n# MCN Script Assistant\n\nMCN 商单脚本生成助手 — 从品牌 brief 到飞书文档的 AI 全流程自动化。\n\n**适用场景**：品牌方/ MCN 机构为小红书达人制作商单脚本，确保内容自然种草、合规安全、高效交付。\n\n---\n\n## 项目结构\n\n```\n/\n├── README.md                               # 本文件\n├── report.md                               # 调研与方案报告\n├── prompts/                                # AI Agent Prompt\n│   ├── 01-brief-deconstruct.md             # Step 1: Brief 拆解\n│   ├── 02-style-analysis.md                # Step 2: 内容风格分析\n│   ├── 03-script-generate.md               # Step 3: 脚本生成\n│   ├── 04-compliance-check.md              # Step 4: 风险质检\n│   └── 05-feishu-write.md                  # Step 5: 飞书文档写入\n├── references/"
+    },
+    {
+      "id": "gh-readme-mcn-script-assistant-0#1",
+      "title": "mcn-script-assistant README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/mcn-script-assistant#readme",
+      "text": ".md              # Step 4: 风险质检\n│   └── 05-feishu-write.md                  # Step 5: 飞书文档写入\n├── references/                             # 小红书调研资料\n│   ├── blogger-profiles.md"
+    },
+    {
+      "id": "gh-readme-mcn-script-assistant-1#0",
+      "title": "mcn-script-assistant README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/mcn-script-assistant#readme",
+      "text": "mcn-script-assistant\nMCN 商单脚本生成助手：从品牌 brief 到飞书文档的 AI 全流程自动化。\n# Step 5: 飞书文档写入\n├── references/                             # 小红书调研资料\n│   ├── blogger-profiles.md                 # 博主调研档案\n│   └── content-breakdown.md                # 内容风格拆解\n├── skills/mcn-script-assistant/\n│   └── SKILL.md                            # 可复用 Skill\n├── feishu/                                 # 飞书接入\n│   ├── writer.py                           # 自动化写入脚本\n│   ├── config.json                         # API 凭证（不提交）\n│   └── config.example.json                 # 配置模板\n└── output/                                 # 最终交付物\n    ├── final-script.md                     # 完整脚本\n    ├── storyboard.md                       # 分镜表\n    └"
+    },
+    {
+      "id": "gh-readme-mcn-script-assistant-1#1",
+      "title": "mcn-script-assistant README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/mcn-script-assistant#readme",
+      "text": "# 最终交付物\n    ├── final-script.md                     # 完整脚本\n    ├── storyboard.md                       # 分镜表\n    └── compliance-report.md                # 合规质检报告"
+    },
+    {
+      "id": "gh-readme-mcn-script-assistant-2#0",
+      "title": "mcn-script-assistant README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/mcn-script-assistant#readme",
+      "text": "mcn-script-assistant\nMCN 商单脚本生成助手：从品牌 brief 到飞书文档的 AI 全流程自动化。\n# 完整脚本\n    ├── storyboard.md                       # 分镜表\n    └── compliance-report.md                # 合规质检报告\n```\n\n---\n\n## 快速开始\n\n### 1. 安装依赖\n\n```bash\npip install requests\n```\n\n### 2. 配置飞书凭证\n\n1. 前往 [飞书开放平台](https://open.feishu.cn) 创建企业自建应用\n2. 开通权限：`docx:document`、`drive:drive`\n3. 发布应用上线\n4. 复制 `feishu/config.example.json` 为 `feishu/config.json`，填入真实凭证：\n\n```json\n{\n  \"app_id\": \"cli_xxxxxxxxxxxxxxx\",\n  \"app_secret\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n  \"doc_token\": \"文档Token（可选，writer.py 会自动创建新文档）\"\n}\n```\n\n### 3. 运行完整 AI 工作流\n\n```bash\nexport DEEPSEEK_API_KEY=\"your-api-key\"\npython main.py --brief brief.md --blogger references/blogger-prof"
+    },
+    {
+      "id": "gh-readme-mcn-script-assistant-2#1",
+      "title": "mcn-script-assistant README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/mcn-script-assistant#readme",
+      "text": "AI 工作流\n\n```bash\nexport DEEPSEEK_API_KEY=\"your-api-key\"\npython main.py --brief brief.md --blogger references/blogger-profiles.md\n```\n\nPipeline 会依次执行 5 步（Brief 拆解 → 风格分析 → 脚本"
+    },
+    {
+      "id": "gh-readme-mcn-script-assistant-3#0",
+      "title": "mcn-script-assistant README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/mcn-script-assistant#readme",
+      "text": "mcn-script-assistant\nMCN 商单脚本生成助手：从品牌 brief 到飞书文档的 AI 全流程自动化。\ny\"\npython main.py --brief brief.md --blogger references/blogger-profiles.md\n```\n\nPipeline 会依次执行 5 步（Brief 拆解 → 风格分析 → 脚本生成 → 合规质检 → 飞书写入），中间产物保存在 `output/` 目录。\n\n### 4. 仅运行飞书文档写入\n\n如果已有脚本文件，可单独写入飞书：\n\n```bash\npython feishu/writer.py\n# 或指定文件\npython feishu/writer.py --script output/final-script.md --storyboard output/storyboard.md --compliance output/compliance-report.md\n```\n\n---\n\n## 工作流说明\n\n本项目设计了一个 5 步 AI Agent Pipeline：\n\n| 步骤 | 功能 | 输入 | 输出 |\n|------|------|------|------|\n| Step 1 | Brief 拆解 | 客户原始 brief | 结构化创作简报 + 合规红线清单 |\n| Step 2 | 风格分析 | 博主内容样本 | 风格指纹（钩子/节奏/镜头/口播） |\n| Step 3 | 脚本生成 | 创作简报 + 风格指纹 | 完整脚本 + 分镜表 |\n| Step 4 | 风险质检 |"
+    },
+    {
+      "id": "gh-readme-mcn-script-assistant-3#1",
+      "title": "mcn-script-assistant README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/mcn-script-assistant#readme",
+      "text": "合规红线清单 |\n| Step 2 | 风格分析 | 博主内容样本 | 风格指纹（钩子/节奏/镜头/口播） |\n| Step 3 | 脚本生成 | 创作简报 + 风格指纹 | 完整脚本 + 分镜表 |\n| Step 4 | 风险质检 | 脚本 + 合规清单 | 质检报告（通过/不通过） |\n| Step 5 | 飞书写入 | 脚本 + 分镜 + 质检报告 |"
+    },
+    {
+      "id": "gh-readme-mcn-script-assistant-4#0",
+      "title": "mcn-script-assistant README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/mcn-script-assistant#readme",
+      "text": "mcn-script-assistant\nMCN 商单脚本生成助手：从品牌 brief 到飞书文档的 AI 全流程自动化。\np 3 | 脚本生成 | 创作简报 + 风格指纹 | 完整脚本 + 分镜表 |\n| Step 4 | 风险质检 | 脚本 + 合规清单 | 质检报告（通过/不通过） |\n| Step 5 | 飞书写入 | 脚本 + 分镜 + 质检报告 | 飞书文档链接 |\n\n每个步骤的详细 Prompt 见 `prompts/` 目录。\n\n---\n\n## 飞书文档接入\n\n### 自动化方式\n\n`feishu/writer.py` 通过飞书开放平台 API 实现：\n1. 使用 App ID + App Secret 获取 tenant_access_token\n2. 调用 `POST /open-apis/docx/v1/documents` 创建文档\n3. 分批写入内容 blocks（heading / paragraph / 分隔线）\n4. 输出文档链接\n\n### 最终飞书文档\n\n**链接**：https://xcnfvm8aee87.feishu.cn/docx/Aeq7dPcDVoKgtCxwKVMcLy5vnUc\n\n该文档由 `writer.py` 自动化创建并写入，非手动复制粘贴。\n\n---\n\n## 测试案例：轻醒 × 凌二七\n\n本项目以虚拟品牌「轻醒」0蔗糖高蛋白希腊酸奶为例，完成了完整的博主调研与脚本生成：\n\n- **品牌**：轻醒（轻食酸奶）\n- **产品**：0蔗糖高蛋白希腊酸奶（原味/蓝莓/黄桃）\n- **调研博主**：3 位候选（凌二七 / Yori"
+    },
+    {
+      "id": "gh-readme-mcn-script-assistant-4#1",
+      "title": "mcn-script-assistant README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/mcn-script-assistant#readme",
+      "text": "本项目以虚拟品牌「轻醒」0蔗糖高蛋白希腊酸奶为例，完成了完整的博主调研与脚本生成：\n\n- **品牌**：轻醒（轻食酸奶）\n- **产品**：0蔗糖高蛋白希腊酸奶（原味/蓝莓/黄桃）\n- **调研博主**：3 位候选（凌二七 / Yorifufu / ssikme），经多维度对比后选择凌二七，详见 `references/blogger-profiles.md"
+    },
+    {
+      "id": "gh-readme-mcn-script-assistant-5#0",
+      "title": "mcn-script-assistant README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/mcn-script-assistant#readme",
+      "text": "mcn-script-assistant\nMCN 商单脚本生成助手：从品牌 brief 到飞书文档的 AI 全流程自动化。\n- **产品**：0蔗糖高蛋白希腊酸奶（原味/蓝莓/黄桃）\n- **调研博主**：3 位候选（凌二七 / Yorifufu / ssikme），经多维度对比后选择凌二七，详见 `references/blogger-profiles.md`\n- **最终选择**：凌二七（干净饮食食谱博主，2.1万粉丝）\n- **平台**：小红书短视频\n- **脚本时长**：~95s / 16镜\n- **版本**：v2.0（基于博主真实逐字稿校准）\n- **合规结果**：18/18 项检查全部通过\n\n---\n\n## 使用工具\n\n- **AI 模型**：Claude Code（调研/脚本生成/飞书集成）+ Prompt 设计兼容 DeepSeek/其他 LLM\n- **飞书 API**：文档自动创建与写入（飞书开放平台 docx API）\n- **调研工具**：小红书 App + 录屏 ASR 转写（一手信源）\n- **脚本语言**：Python 3\n\n## 问题排查记录\n\n开发过程中遇到的权限、API 限制及解决方案，详见 `report.md` 第七章，包括：\n\n| 问题 | 解决方案 |\n|------|---------|\n| 小红书静态页面反爬 | 改用 App 录屏 + ASR 转写获取真实逐字稿 |\n| 脚本 v1.0 基于推测而非真实数据 | v2.0 基于三条视频完整逐字稿重写 |\n| 飞书表格 API 格式复杂 | 改用结构化段落排版替代表格 |\n| 飞书"
+    },
+    {
+      "id": "gh-readme-mcn-script-assistant-5#1",
+      "title": "mcn-script-assistant README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/mcn-script-assistant#readme",
+      "text": "书静态页面反爬 | 改用 App 录屏 + ASR 转写获取真实逐字稿 |\n| 脚本 v1.0 基于推测而非真实数据 | v2.0 基于三条视频完整逐字稿重写 |\n| 飞书表格 API 格式复杂 | 改用结构化段落排版替代表格 |\n| 飞书手动创建的文档 App 无写入权限 | 改用 API 创建新文档，App 自动获得权限 |\n| 飞书批量写入上限 50 b"
+    },
+    {
+      "id": "gh-readme-mcn-script-assistant-6",
+      "title": "mcn-script-assistant README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/mcn-script-assistant#readme",
+      "text": "mcn-script-assistant\nMCN 商单脚本生成助手：从品牌 brief 到飞书文档的 AI 全流程自动化。\nv2.0 基于三条视频完整逐字稿重写 |\n| 飞书表格 API 格式复杂 | 改用结构化段落排版替代表格 |\n| 飞书手动创建的文档 App 无写入权限 | 改用 API 创建新文档，App 自动获得权限 |\n| 飞书批量写入上限 50 blocks | 实现自动分批写入 |\n| 飞书 bullet/divider block 不支持 | 改用段落 block + 文本前缀模拟 |\n\n---\n\n## License\n\n本项目为求职面试测试题交付物，仅供评估使用。"
+    },
+    {
+      "id": "gh-repo-english-reading-assistant",
+      "title": "english-reading-assistant",
+      "source": "github",
+      "url": "https://github.com/NafYoung/english-reading-assistant",
+      "text": "仓库：NafYoung/english-reading-assistant\nmacOS desktop app for English long-text reading analysis — zero-dependency LLM client, intelligent chunking, Obsidian integration\n语言：Python\n主页：https://github.com/NafYoung/english-reading-assistant\nTopics：llm, macos, obsidian, python, reading-assistant, tkinter"
+    },
+    {
+      "id": "gh-readme-english-reading-assistant-0#0",
+      "title": "english-reading-assistant README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/english-reading-assistant#readme",
+      "text": "english-reading-assistant\nmacOS desktop app for English long-text reading analysis — zero-dependency LLM client, intelligent chunking, Obsidian integration\n# English Reading Assistant\n\n这是一个使用 Python 3.12 和 Tkinter 的 macOS 桌面应用。项目入口统一为 `main.py`，推荐在 conda 环境中运行。\n\n## 1. 创建环境\n\n```bash\nconda env create -f environment.yml\n```\n\n如果环境已经存在，更新时使用：\n\n```bash\nconda env update -f environment.yml --prune\n```\n\n## 2. 激活环境\n\n```bash\nconda activate english-reading-assistant\n```\n\n## 3. 启动项目\n\n首次使用先准备本地配置：\n\n```bash\ncp config.json.example config.json\n```\n\n然后把 `config.json` 里的 `api_key` 改成你自己的 DeepSeek Key，再启动：\n\n```bash\npython main.py\n```\n\n如果解析较长文章时偶尔超时，可以把 `config.json` 里的 `timeout_seconds` 调大到 `60` 或 `90`。\n\n现在程序遇到"
+    },
+    {
+      "id": "gh-readme-english-reading-assistant-0#1",
+      "title": "english-reading-assistant README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/english-reading-assistant#readme",
+      "text": "Seek Key，再启动：\n\n```bash\npython main.py\n```\n\n如果解析较长文章时偶尔超时，可以把 `config.json` 里的 `timeout_seconds` 调大到 `60` 或 `90`。\n\n现在程序遇到较长文章时，也会自动按段落分成多次请求再合并结果，避免整篇一次请求导致超时。\n对于被拆成多段的长文章，程序还会在分段解析后自动生成一版“整篇总览”，方便先看全文重点，再看各部分细节。\n桌面界面已经优化为双栏卡片布局，增加了输入统计、进度状态、复制结果和清空原文按钮。\n结果区现在会按“整篇总览 / 分段标题 /"
+    },
+    {
+      "id": "gh-readme-english-reading-assistant-1#0",
+      "title": "english-reading-assistant README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/english-reading-assistant#readme",
+      "text": "english-reading-assistant\nmacOS desktop app for English long-text reading analysis — zero-dependency LLM client, intelligent chunking, Obsidian integration\n时。\n对于被拆成多段的长文章，程序还会在分段解析后自动生成一版“整篇总览”，方便先看全文重点，再看各部分细节。\n桌面界面已经优化为双栏卡片布局，增加了输入统计、进度状态、复制结果和清空原文按钮。\n结果区现在会按“整篇总览 / 分段标题 / 编号小节 / 成功或失败提示”做富文本高亮；桌面 `.app` 也会自动使用项目内的自定义图标。\n输入区现在支持导入 UTF-8 编码的 `txt/md/markdown` 文件，结果区支持一键导出 Markdown。\n\n如果你不想每次打开终端，也可以在 macOS 里直接双击项目根目录的 `run.command`。\n\n如果你想要一个更像“桌面按钮”的入口，而且不想依赖 Terminal，可以在项目目录运行：\n\n```bash\npython install_desktop_launcher.py\n```\n\n执行后会在桌面生成或更新 `英语阅读助手.app`。以后双击它即可在后台启动项目，不会再弹出 Terminal，也不会因为关闭 Terminal 而把程序一起关掉。\n\n如果桌面按钮点击后没有正常打开，可以查看日志：\n\n```bash\ntail -n 50 ~/Library/Logs/English\\ Reading\\ Assist"
+    },
+    {
+      "id": "gh-readme-english-reading-assistant-1#1",
+      "title": "english-reading-assistant README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/english-reading-assistant#readme",
+      "text": "Terminal，也不会因为关闭 Terminal 而把程序一起关掉。\n\n如果桌面按钮点击后没有正常打开，可以查看日志：\n\n```bash\ntail -n 50 ~/Library/Logs/English\\ Reading\\ Assistant/app.log\n```\n\n如果你要连接 Obsidian，请在 `config.json` 里补上：\n\n```json\n\"obsidian\": {\n  \"vault_path\": \"/你的/Obsidian/Vault/绝对路径\",\n  \"note_path\": \"Inbox/English Readi"
+    },
+    {
+      "id": "gh-readme-english-reading-assistant-2",
+      "title": "english-reading-assistant README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/english-reading-assistant#readme",
+      "text": "english-reading-assistant\nmacOS desktop app for English long-text reading analysis — zero-dependency LLM client, intelligent chunking, Obsidian integration\n`config.json` 里补上：\n\n```json\n\"obsidian\": {\n  \"vault_path\": \"/你的/Obsidian/Vault/绝对路径\",\n  \"note_path\": \"Inbox/English Reading.md\"\n}\n```\n\n解析成功后，界面会启用“保存到 Obsidian”按钮，并把当前原文和解析结果追加到该笔记。\n\n## 4. 运行测试\n\n```bash\npython -m unittest discover -s tests\n```"
+    },
+    {
+      "id": "gh-repo-auto-tool",
+      "title": "auto-tool",
+      "source": "github",
+      "url": "https://github.com/NafYoung/auto-tool",
+      "text": "仓库：NafYoung/auto-tool\nWeChat public account digest tool with Playwright, RSS/Wechat2RSS discovery, DeepSeek summaries, SMTP email delivery, and GitHub Actions/local fallback scheduling.\n语言：TypeScript\n主页：https://github.com/NafYoung/auto-tool\nTopics：automation, github-actions, nodejs, playwright, rss, wechat"
+    },
+    {
+      "id": "gh-readme-auto-tool-0#0",
+      "title": "auto-tool README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/auto-tool#readme",
+      "text": "auto-tool\nWeChat public account digest tool with Playwright, RSS/Wechat2RSS discovery, DeepSeek summaries, SMTP email delivery, and GitHub Actions/local fallback scheduling.\n# 文旅公众号日报器\n\n一个运行在本机 Mac 上的 Node.js 工具：从微信公众号、新闻网站、政策门户等多源渠道自动采集文旅行业资讯，调用 DeepSeek 生成结构化日报，并通过 SMTP 发邮件。同时提供 HTTP API，支持外部系统查询文章与日报数据。\n\n现在支持三种运行模式：\n\n- `本机模式`：搜狗搜索发现文章，适合你当前这台 Mac\n- `云端模式`：RSS/Atom 订阅源发现文章，适合 GitHub Actions 或常开云主机\n- `API 模式`：启动 HTTP 服务，供 Claude Code Skill 或其他系统调用\n\n## 项目成果与使用证明\n\n这个项目面向\"文旅行业信息分散、人工盯更新和整理日报效率低\"的痛点，搭建了一条从多源内容发现到邮件分发的 AI 自动化工作流：\n\n```text\n定时触发 -> 多源文章发现 -> 正文抓取 -> 清洗去重 -> 关键词过滤 -> DeepSeek 逐篇摘要 -> 日报总览生成 -> Markdown 归档 -> 邮件分发 -> 状态持久化\n```\n\n核心能力：\n\n- 用 Playwright/RSS/新闻网站爬虫发现并抓取目标来源文章，保留真实原文链接。\n-"
+    },
+    {
+      "id": "gh-readme-auto-tool-0#1",
+      "title": "auto-tool README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/auto-tool#readme",
+      "text": "-> DeepSeek 逐篇摘要 -> 日报总览生成 -> Markdown 归档 -> 邮件分发 -> 状态持久化\n```\n\n核心能力：\n\n- 用 Playwright/RSS/新闻网站爬虫发现并抓取目标来源文章，保留真实原文链接。\n- 支持微信公众号（搜狗搜索 + RSS）、新闻网站（界面新闻、迈点、执惠）、政策门户（中国政府网）等多种来源类型。\n- 用 `keywordFilter` 对非公众号来源做关键词过滤，确保只采集文旅相关内容。\n- 用 DeepSeek 生成逐篇摘要和当天总览，并输出 Markdown 日报。\n- 用 `state.json` 记录已处理文章、失败"
+    },
+    {
+      "id": "gh-readme-auto-tool-1#0",
+      "title": "auto-tool README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/auto-tool#readme",
+      "text": "auto-tool\nWeChat public account digest tool with Playwright, RSS/Wechat2RSS discovery, DeepSeek summaries, SMTP email delivery, and GitHub Actions/local fallback scheduling.\n类型。\n- 用 `keywordFilter` 对非公众号来源做关键词过滤，确保只采集文旅相关内容。\n- 用 DeepSeek 生成逐篇摘要和当天总览，并输出 Markdown 日报。\n- 用 `state.json` 记录已处理文章、失败来源、日报发送状态，避免重复发送。\n- 提供 HTTP API（`npm run serve`），支持文章查询、日报获取、触发采集等操作。\n- 支持本机 `launchd` 兜底和 GitHub Actions 云端定时运行。\n- 已加入测试覆盖，包含抓取、状态、配置、日报、RSS、爬虫和工作流等关键逻辑。\n\n运行证明：\n\n![终端运行证明](evidence/terminal-run-proof.png)\n\n日报产物示例：\n\n![2026-05-08 日报截图](evidence/report-2026-05-08-proof.png)\n\n## 已实现的命令\n\n```bash\nnpm run bootstrap\nnpm run check\nnpm run check -- --discovery-mode rss-only\nnpm run sync-feeds -- --dry-run\nnpm ru"
+    },
+    {
+      "id": "gh-readme-auto-tool-1#1",
+      "title": "auto-tool README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/auto-tool#readme",
+      "text": "``bash\nnpm run bootstrap\nnpm run check\nnpm run check -- --discovery-mode rss-only\nnpm run sync-feeds -- --dry-run\nnpm run report -- --date 2026-04-01\nnpm run report -- --date 2026-04-01 --send-email\nnpm run report -- --date 2026-04-01 --send-email --mark-as-sent\nnpm run run-daily\nnpm run serve"
+    },
+    {
+      "id": "gh-readme-auto-tool-2#0",
+      "title": "auto-tool README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/auto-tool#readme",
+      "text": "auto-tool\nWeChat public account digest tool with Playwright, RSS/Wechat2RSS discovery, DeepSeek summaries, SMTP email delivery, and GitHub Actions/local fallback scheduling.\n2026-04-01 --send-email\nnpm run report -- --date 2026-04-01 --send-email --mark-as-sent\nnpm run run-daily\nnpm run serve\nnpm run install-launchd\nnpm run uninstall-launchd\n```\n\n## HTTP API\n\n`npm run serve` 启动后，默认监听 `http://localhost:3457`，提供以下端点：\n\n| 方法 | 路径 | 说明 |\n|------|------|------|\n| GET | `/api/public/items?since=<ISO>&take=50&q=<keyword>&category=<id>` | 查询文章列表 |\n| GET | `/api/public/daily` | 获取今日日报 |\n| GET | `/api/public/daily/{YYYY-MM-DD}` | 获取指定日期日报 |\n| GET | `/api/public/dailies?take=30` | 获取历史日报列表 |\n| GET | `/a"
+    },
+    {
+      "id": "gh-readme-auto-tool-2#1",
+      "title": "auto-tool README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/auto-tool#readme",
+      "text": "报 |\n| GET | `/api/public/daily/{YYYY-MM-DD}` | 获取指定日期日报 |\n| GET | `/api/public/dailies?take=30` | 获取历史日报列表 |\n| GET | `/api/public/health` | 健康检查 |\n| POST | `/api/admin/check` | 触发一次采集 |\n| POST | `/api/admin/report?date=YYYY-MM-DD&send-email` | 触发日报生成 |\n\n## 数据源\n\n当前配置了 5 类数据来源：\n\n| 来源 | 类型 | 发现方"
+    },
+    {
+      "id": "gh-readme-auto-tool-3#0",
+      "title": "auto-tool README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/auto-tool#readme",
+      "text": "auto-tool\nWeChat public account digest tool with Playwright, RSS/Wechat2RSS discovery, DeepSeek summaries, SMTP email delivery, and GitHub Actions/local fallback scheduling.\n` | 触发一次采集 |\n| POST | `/api/admin/report?date=YYYY-MM-DD&send-email` | 触发日报生成 |\n\n## 数据源\n\n当前配置了 5 类数据来源：\n\n| 来源 | 类型 | 发现方式 |\n|------|------|----------|\n| 数字文旅观察 | 微信公众号 | 搜狗搜索 + RSS |\n| 上海文旅产业研究院 | 微信公众号 | 搜狗搜索 + RSS |\n| 界面新闻（文旅 / 文化） | 新闻网站 | RSS + 关键词过滤 |\n| 中国政府网·政策 | 政策门户 | RSS + 关键词过滤 |\n| 迈点 / 执惠 | 行业网站 | HTML 爬虫（scraper） |\n\n新增来源只需在 `wenlv.config.json` 的 `sources` 数组中添加配置项，支持 `wechat`、`news-site`、`policy`、`scrape` 四种 `sourceType`。\n\n## 环境变量\n\n```bash\nexport DEEPSEEK_API_KEY=your_deepseek_key\nexport SMTP_HOST=smtp.exampl"
+    },
+    {
+      "id": "gh-readme-auto-tool-3#1",
+      "title": "auto-tool README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/auto-tool#readme",
+      "text": "licy`、`scrape` 四种 `sourceType`。\n\n## 环境变量\n\n```bash\nexport DEEPSEEK_API_KEY=your_deepseek_key\nexport SMTP_HOST=smtp.example.com\nexport SMTP_PORT=465\nexport SMTP_USER=your_user\nexport SMTP_PASS=your_password\nexport MAIL_TO=your@email.com\nexport MAIL_FROM=\"文旅公众号日报 <your@email.com>\"\n```\n\n可选的 Wechat"
+    },
+    {
+      "id": "gh-readme-auto-tool-4#0",
+      "title": "auto-tool README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/auto-tool#readme",
+      "text": "auto-tool\nWeChat public account digest tool with Playwright, RSS/Wechat2RSS discovery, DeepSeek summaries, SMTP email delivery, and GitHub Actions/local fallback scheduling.\nexport SMTP_PASS=your_password\nexport MAIL_TO=your@email.com\nexport MAIL_FROM=\"文旅公众号日报 <your@email.com>\"\n```\n\n可选的 Wechat2RSS 集成环境变量：\n\n```bash\nexport WECHAT2RSS_BASE_URL=https://your-wechat2rss.example.com\nexport WECHAT2RSS_TOKEN=your_wechat2rss_token\n```\n\n## 首次使用\n\n1. 如果你需要保留本机私有配置，先复制一份本地文件：\n\n```bash\ncp wenlv.config.example.json wenlv.config.local.json\n```\n\n说明：\n\n- CLI 默认会按 `wenlv.config.local.json -> wenlv.config.json` 的顺序查找配置文件。\n- 建议把你自己的 `email.from`、浏览器目录等本机信息放到 `wenlv.config.local.json`，不要直接改公开模板。\n\n2. 编辑配置文件中的 `email"
+    },
+    {
+      "id": "gh-readme-auto-tool-4#1",
+      "title": "auto-tool README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/auto-tool#readme",
+      "text": "nlv.config.json` 的顺序查找配置文件。\n- 建议把你自己的 `email.from`、浏览器目录等本机信息放到 `wenlv.config.local.json`，不要直接改公开模板。\n\n2. 编辑配置文件中的 `email.from`，必要时调整 `browserProfilePath`。\n3. 运行 `npm run bootstrap`，首次建议保持有界面模式，完成微信登录或确认浏览器持久化目录可用。\n3. 运行 `npm run check` 检查能否抓到新文章。\n4. 运行 `npm run report -- --date YYYY-MM-DD --se"
+    },
+    {
+      "id": "gh-readme-auto-tool-5#0",
+      "title": "auto-tool README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/auto-tool#readme",
+      "text": "auto-tool\nWeChat public account digest tool with Playwright, RSS/Wechat2RSS discovery, DeepSeek summaries, SMTP email delivery, and GitHub Actions/local fallback scheduling.\nstrap`，首次建议保持有界面模式，完成微信登录或确认浏览器持久化目录可用。\n3. 运行 `npm run check` 检查能否抓到新文章。\n4. 运行 `npm run report -- --date YYYY-MM-DD --send-email` 生成并发送指定日期日报。\n5. 运行 `npm run run-daily` 持续驻留，在每天 `20:30` 执行本机兜底发送。\n\n补充说明：\n\n- `npm run report -- --date YYYY-MM-DD --send-email` 默认是\"测试发送\"，会发邮件，但不会把这次发送记成当天正式发送。\n- 如果你希望手动补发后，系统把它视为当天正式发送，请使用 `--mark-as-sent`。\n- `run-daily` / `launchd` 触发的每日任务会自动把当天成功发送记为正式发送。\n- 本机 `run-daily` / `launchd` 即使当天无新文章，也会发送一封状态邮件，便于确认无人值守链路按时运行。\n- GitHub Actions 如果没有从 RSS 中发现新文章，只会生成状态报告并提交运行状态，不会发送空邮件，也不会阻止 20:30 的本"
+    },
+    {
+      "id": "gh-readme-auto-tool-5#1",
+      "title": "auto-tool README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/auto-tool#readme",
+      "text": "/ `launchd` 即使当天无新文章，也会发送一封状态邮件，便于确认无人值守链路按时运行。\n- GitHub Actions 如果没有从 RSS 中发现新文章，只会生成状态报告并提交运行状态，不会发送空邮件，也不会阻止 20:30 的本机兜底复核。\n- `dailyReportTime: 19:00` 只定义日报统计窗口截止时间，不代表实际发送时间。\n- 当前默认采用\"双通道\"：GitHub Actions 在 `20:15` 做云端主发送，本机 `launchd` 在 `20:30` 做兜底；只有云端已经发出包含文章的正式日报时，本机才会跳过。\n\n## Wechat2RSS"
+    },
+    {
+      "id": "gh-readme-auto-tool-6#0",
+      "title": "auto-tool README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/auto-tool#readme",
+      "text": "auto-tool\nWeChat public account digest tool with Playwright, RSS/Wechat2RSS discovery, DeepSeek summaries, SMTP email delivery, and GitHub Actions/local fallback scheduling.\n送时间。\n- 当前默认采用\"双通道\"：GitHub Actions 在 `20:15` 做云端主发送，本机 `launchd` 在 `20:30` 做兜底；只有云端已经发出包含文章的正式日报时，本机才会跳过。\n\n## Wechat2RSS 接入\n\n如果你要做长期无人值守的云端模式，推荐把 `rssFeedUrls` 切到你自己的 Wechat2RSS 实例。\n\n最短流程：\n\n1. 先按官方文档部署 Wechat2RSS，并完成授权与域名配置。\n2. 在本地配置：\n\n```bash\nexport WECHAT2RSS_BASE_URL=https://your-wechat2rss.example.com\nexport WECHAT2RSS_TOKEN=your_wechat2rss_token\n```\n\n3. 先预览同步结果：\n\n```bash\nnpm run sync-feeds -- --dry-run\n```\n\n4. 确认没问题后写回配置文件：\n\n```bash\nnpm run sync-feeds\n```\n\n这个命令会用每个 `source.seedArticleUrl` 调 Wechat2RSS 的 `/addurl` API"
+    },
+    {
+      "id": "gh-readme-auto-tool-6#1",
+      "title": "auto-tool README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/auto-tool#readme",
+      "text": "run\n```\n\n4. 确认没问题后写回配置文件：\n\n```bash\nnpm run sync-feeds\n```\n\n这个命令会用每个 `source.seedArticleUrl` 调 Wechat2RSS 的 `/addurl` API，并把返回的 feed URL 写回 `wenlv.config.json` 的 `rssFeedUrls`。\n\n## 云端模式（第二阶段）\n\n如果你希望\"电脑关机后也能自动发\"，不要再依赖本机 `launchd`。第二阶段的推荐做法是：\n\n1. 给每个 `source` 配置 `rssFeedUrls`\n2. 把仓库推到 GitHub\n3. 在"
+    },
+    {
+      "id": "gh-readme-auto-tool-7#0",
+      "title": "auto-tool README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/auto-tool#readme",
+      "text": "auto-tool\nWeChat public account digest tool with Playwright, RSS/Wechat2RSS discovery, DeepSeek summaries, SMTP email delivery, and GitHub Actions/local fallback scheduling.\n。\n\n## 云端模式（第二阶段）\n\n如果你希望\"电脑关机后也能自动发\"，不要再依赖本机 `launchd`。第二阶段的推荐做法是：\n\n1. 给每个 `source` 配置 `rssFeedUrls`\n2. 把仓库推到 GitHub\n3. 在仓库 Secrets 里配置：\n   - `DEEPSEEK_API_KEY`\n   - `SMTP_HOST`\n   - `SMTP_PORT`\n   - `SMTP_USER`\n   - `SMTP_PASS`\n   - `MAIL_TO`\n   - `MAIL_FROM`（推荐；用于覆盖公开模板里的发件人）\n4. 启用 `.github/workflows/daily-digest.yml`\n\n说明：\n\n- 云端模式优先使用 RSS/Atom 中携带的全文生成日报，避免在 GitHub Actions 里打开真实微信文章页触发访问限制。\n- 当前仓库里的 GitHub Actions 工作流会在北京时间 `20:15` 定时执行，也支持手动触发。\n- GitHub Actions 采用\"部分成功可发送\"策略：只要至少一个源抓到新文章，就会发送日报；失败源会写进\"抓取异常\"段落，但不再整体阻断发信"
+    },
+    {
+      "id": "gh-readme-auto-tool-7#1",
+      "title": "auto-tool README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/auto-tool#readme",
+      "text": "tHub Actions 工作流会在北京时间 `20:15` 定时执行，也支持手动触发。\n- GitHub Actions 采用\"部分成功可发送\"策略：只要至少一个源抓到新文章，就会发送日报；失败源会写进\"抓取异常\"段落，但不再整体阻断发信。\n- GitHub Actions 现在会强制使用 `rss-only` 发现模式，不再回退到搜狗搜索，避免 headless 环境下的搜狗反爬噪音。\n- 云端 `rss-only` 模式会跳过订阅源里的 `weixin.sogou.com/link` 搜狗跳转链接，也会跳过未携带全文的直接微信链接；要稳定运行，订阅源最好直接返回 `mp.we"
+    },
+    {
+      "id": "gh-readme-auto-tool-8#0",
+      "title": "auto-tool README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/auto-tool#readme",
+      "text": "auto-tool\nWeChat public account digest tool with Playwright, RSS/Wechat2RSS discovery, DeepSeek summaries, SMTP email delivery, and GitHub Actions/local fallback scheduling.\n免 headless 环境下的搜狗反爬噪音。\n- 云端 `rss-only` 模式会跳过订阅源里的 `weixin.sogou.com/link` 搜狗跳转链接，也会跳过未携带全文的直接微信链接；要稳定运行，订阅源最好直接返回 `mp.weixin.qq.com` 原文链接，并在 `content:encoded`、`content` 或足够长的 `description` 中携带正文。\n- 工作流会把 `data/state.json` 和 `reports/*.md` 提交回仓库，确保\"已处理文章\"状态能跨天持久化。\n- 如果不持久化状态，第二天运行会把同一批旧文章再次算作新文章。\n\n`rssFeedUrls` 是第二阶段的关键配置。当前代码支持任意 RSS/Atom 订阅源；云端无人值守模式要求 feed 条目链接直接指向真实公众号文章页，并携带可读正文。\n\n注意：\n\n- 如果同时配置了 `rssFeedUrls` 和 `searchQuery`，程序会先试订阅源，失败后再回退到搜狗搜索。\n- 如果使用 `--discovery-mode rss-only`，程序只会使用 `rssFeedUrls`，不会回退到搜狗。\n- 公共 R"
+    },
+    {
+      "id": "gh-readme-auto-tool-8#1",
+      "title": "auto-tool README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/auto-tool#readme",
+      "text": "sFeedUrls` 和 `searchQuery`，程序会先试订阅源，失败后再回退到搜狗搜索。\n- 如果使用 `--discovery-mode rss-only`，程序只会使用 `rssFeedUrls`，不会回退到搜狗。\n- 公共 RSSHub 实例可作为起点，但稳定性不保证。要做长期无人值守，最好改成你自己的 RSSHub 实例或你确认稳定的第三方实例。\n- 如果你已经部署了 Wechat2RSS，推荐直接用 `npm run sync-feeds` 把 `rssFeedUrls` 换成自己的实例返回值。\n\n## macOS 自动化\n\n项目提供了 `launchd` 安装脚"
+    },
+    {
+      "id": "gh-readme-auto-tool-9#0",
+      "title": "auto-tool README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/auto-tool#readme",
+      "text": "auto-tool\nWeChat public account digest tool with Playwright, RSS/Wechat2RSS discovery, DeepSeek summaries, SMTP email delivery, and GitHub Actions/local fallback scheduling.\n定的第三方实例。\n- 如果你已经部署了 Wechat2RSS，推荐直接用 `npm run sync-feeds` 把 `rssFeedUrls` 换成自己的实例返回值。\n\n## macOS 自动化\n\n项目提供了 `launchd` 安装脚本，会在当前用户下创建 `com.nafyoung.wenlv-news-digest` 定时任务，每天北京时间 `20:30` 执行本机兜底发送，并额外每 30 分钟补跑一次，避免 Mac 睡眠错过固定时间后完全不执行。\n\n注意：\n\n- 自动化任务会以 `headed` 模式短暂拉起浏览器窗口，以降低搜狗微信搜索反爬概率。\n- 30 分钟补跑不会重复发信；当天已有正式发送记录时，任务会按状态直接跳过。\n- 自动化任务不会直接使用你当前工作区，而是先同步 GitHub `origin/main` 到独立 automation runtime，再根据 canonical state 判断是否需要兜底发送。\n- 安装脚本会把本机配置和浏览器 profile 放到 `~/.codex/automation-runtimes/wenlv-news-digest/`，避免 launchd 后台进程被 macOS"
+    },
+    {
+      "id": "gh-readme-auto-tool-9#1",
+      "title": "auto-tool README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/auto-tool#readme",
+      "text": "l state 判断是否需要兜底发送。\n- 安装脚本会把本机配置和浏览器 profile 放到 `~/.codex/automation-runtimes/wenlv-news-digest/`，避免 launchd 后台进程被 macOS 的 Documents 隐私权限拦截。\n- 执行时需要当前 macOS 用户处于已登录桌面会话；如果完全退出登录，GUI 浏览器无法正常启动。\n- 白天手动执行 `report --send-email` 做联调，不会影响晚上正式发送；只有显式加 `--mark-as-sent`，才会占用当天正式发送资格。\n\n1. 先把环境变量写到 `~/.c"
+    },
+    {
+      "id": "gh-readme-auto-tool-10#0",
+      "title": "auto-tool README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/auto-tool#readme",
+      "text": "auto-tool\nWeChat public account digest tool with Playwright, RSS/Wechat2RSS discovery, DeepSeek summaries, SMTP email delivery, and GitHub Actions/local fallback scheduling.\n出登录，GUI 浏览器无法正常启动。\n- 白天手动执行 `report --send-email` 做联调，不会影响晚上正式发送；只有显式加 `--mark-as-sent`，才会占用当天正式发送资格。\n\n1. 先把环境变量写到 `~/.config/wenlv-news-digest.env`\n2. 再运行：\n\n```bash\nnpm run install-launchd\n```\n\n卸载：\n\n```bash\nnpm run uninstall-launchd\n```\n\n日志默认写到：\n\n- `~/Library/Logs/wenlv-news-digest/launchd.stdout.log`\n- `~/Library/Logs/wenlv-news-digest/launchd.stderr.log`\n\n## 目录说明\n\n- `src/`：命令行、抓取、摘要、日报、邮件和 API 逻辑。\n  - `wechat.ts`：微信公众号文章发现与抓取（搜狗搜索 + Playwright）\n  - `scraper.ts`：新闻网站爬虫（迈点、执惠等，cheerio + fetch）\n  - `feed.ts`：RSS/Atom 订阅源"
+    },
+    {
+      "id": "gh-readme-auto-tool-10#1",
+      "title": "auto-tool README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/auto-tool#readme",
+      "text": "- `wechat.ts`：微信公众号文章发现与抓取（搜狗搜索 + Playwright）\n  - `scraper.ts`：新闻网站爬虫（迈点、执惠等，cheerio + fetch）\n  - `feed.ts`：RSS/Atom 订阅源解析与关键词过滤\n  - `server.ts`：HTTP API 服务\n  - `workflow.ts` / `pipeline.ts`：主流程编排\n  - `deepseek.ts`：DeepSeek 摘要生成\n  - `digest.ts` / `report.ts`：日报拼装与归档\n  - `email.ts`：SMTP 邮件分发"
+    },
+    {
+      "id": "gh-readme-auto-tool-11#0",
+      "title": "auto-tool README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/auto-tool#readme",
+      "text": "auto-tool\nWeChat public account digest tool with Playwright, RSS/Wechat2RSS discovery, DeepSeek summaries, SMTP email delivery, and GitHub Actions/local fallback scheduling.\n/ `pipeline.ts`：主流程编排\n  - `deepseek.ts`：DeepSeek 摘要生成\n  - `digest.ts` / `report.ts`：日报拼装与归档\n  - `email.ts`：SMTP 邮件分发\n  - `state.ts`：状态持久化\n  - `config.ts`：配置加载与校验\n- `data/state.json`：运行态，保存已处理文章、失败记录和日报发送状态。\n- `reports/YYYY-MM-DD.md`：日报归档。\n- `wenlv.config.json`：公开模板配置，适合放进仓库。\n- `wenlv.config.local.json`：本机私有配置，优先级高于公开模板，默认不提交。\n- `wenlv.launchd.env.example`：`launchd` 使用的环境变量模板。\n\n## 配置示例\n\n`wenlv.config.example.json` 展示了多种来源类型的配置方式：\n\n- `sourceType: \"wechat\"`：微信公众号，走搜狗搜索 + RSS\n- `sourceType: \"news-site\"`：新闻网站，走 RSS + 关键词过滤\n-"
+    },
+    {
+      "id": "gh-readme-auto-tool-11#1",
+      "title": "auto-tool README",
+      "source": "github",
+      "url": "https://github.com/NafYoung/auto-tool#readme",
+      "text": "mple.json` 展示了多种来源类型的配置方式：\n\n- `sourceType: \"wechat\"`：微信公众号，走搜狗搜索 + RSS\n- `sourceType: \"news-site\"`：新闻网站，走 RSS + 关键词过滤\n- `sourceType: \"policy\"`：政策门户，走 RSS + 关键词过滤\n- `sourceType: \"scrape\"`：行业网站，走 HTML 爬虫\n\n如果同时配置了 `rssFeedUrls`，程序会优先使用订阅源发现文章。`keywordFilter` 可用于对非公众号来源做内容过滤，只保留包含指定关键词的文章。"
+    }
+  ]
+}

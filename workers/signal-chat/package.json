@@ -1,0 +1,14 @@
+{
+  "name": "signal-chat",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "secret:deepseek": "wrangler secret put DEEPSEEK_API_KEY"
+  },
+  "devDependencies": {
+    "wrangler": "^4.121.0"
+  }
+}
