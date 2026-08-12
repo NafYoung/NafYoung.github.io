@@ -1,24 +1,40 @@
 #!/usr/bin/env node
 /**
- * Build a static RAG corpus from public GitHub repos + siteContent.
- * Output: public/rag/index.json
+ * Build a static RAG corpus from:
+ * - siteContent
+ * - public GitHub repos
+ * - private KB normal-only export (nafyoung-knowledge)
+ *
+ * Privacy red line: never ingest private/restricted persona records.
+ * Output: public/rag/index.json (+ public/rag/persona-normal.json cache)
  */
-import { mkdir, writeFile } from 'node:fs/promises'
+import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
-import { createRequire } from 'node:module'
+import { spawnSync } from 'node:child_process'
 import esbuild from 'esbuild'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = join(__dirname, '..')
 const outPath = join(root, 'public/rag/index.json')
+const personaCachePath = join(root, 'public/rag/persona-normal.json')
 const owner = 'NafYoung'
+const privateKbRepo = 'nafyoung-knowledge'
+const privateKbPath = 'nafyoung_kb_private_v1.json'
+
+function resolveGithubToken() {
+  if (process.env.GITHUB_TOKEN) return process.env.GITHUB_TOKEN
+  if (process.env.GH_TOKEN) return process.env.GH_TOKEN
+  const res = spawnSync('gh', ['auth', 'token'], { encoding: 'utf8' })
+  if (res.status === 0 && res.stdout.trim()) return res.stdout.trim()
+  return ''
+}
+
+const githubToken = resolveGithubToken()
 const ghHeaders = {
   Accept: 'application/vnd.github+json',
   'User-Agent': 'nafyoung-rag-indexer',
-  ...(process.env.GITHUB_TOKEN
-    ? { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` }
-    : {}),
+  ...(githubToken ? { Authorization: `Bearer ${githubToken}` } : {}),
 }
 
 function chunkText(text, { size = 700, overlap = 120 } = {}) {
@@ -153,7 +169,12 @@ async function docsFromGithub() {
     `https://api.github.com/users/${owner}/repos?per_page=100&sort=updated`,
   )
   const publicRepos = repos.filter(
-    (r) => !r.private && !r.fork && !r.archived && !String(r.description || '').includes('[DEPRECATED]'),
+    (r) =>
+      !r.private &&
+      !r.fork &&
+      !r.archived &&
+      !String(r.description || '').includes('[DEPRECATED]') &&
+      r.name !== privateKbRepo,
   )
 
   const docs = [
@@ -200,6 +221,136 @@ async function docsFromGithub() {
   return docs
 }
 
+function exportNormalPersona(kb) {
+  const records = Array.isArray(kb?.records) ? kb.records : []
+  const normal = records
+    .filter((r) => r && r.sensitivity === 'normal' && r.statement)
+    .map((r) => ({
+      id: r.id,
+      domain: r.domain,
+      type: r.type,
+      statement: r.statement,
+      time_scope: r.time_scope || null,
+      tags: Array.isArray(r.tags) ? r.tags : [],
+    }))
+
+  return {
+    version: 1,
+    source: `${owner}/${privateKbRepo}/${privateKbPath}`,
+    exportedAt: new Date().toISOString(),
+    policy: {
+      include_sensitivity: ['normal'],
+      exclude_sensitivity: ['private', 'restricted'],
+      note: 'Public-site RAG whitelist only. No private/restricted persona records.',
+    },
+    identity_public: kb?.identity_public || null,
+    records: normal,
+  }
+}
+
+function docsFromPersonaNormal(persona) {
+  const docs = []
+  const idPub = persona?.identity_public
+  if (idPub) {
+    docs.push({
+      id: 'persona-identity-public',
+      title: '公开身份',
+      source: 'persona',
+      url: 'https://nafyoung.github.io/',
+      text: [
+        idPub.display_name_zh,
+        idPub.public_name,
+        idPub.current_role,
+        idPub.primary_city,
+      ]
+        .filter(Boolean)
+        .join('\n'),
+    })
+  }
+
+  for (const r of persona.records || []) {
+    docs.push({
+      id: `persona-${r.id}`,
+      title: `${r.domain || 'persona'} · ${r.id}`,
+      source: 'persona',
+      url: 'https://nafyoung.github.io/inspired/',
+      text: [
+        r.statement,
+        r.type ? `类型：${r.type}` : '',
+        r.time_scope ? `时间：${r.time_scope}` : '',
+        Array.isArray(r.tags) && r.tags.length ? `标签：${r.tags.join('、')}` : '',
+      ]
+        .filter(Boolean)
+        .join('\n'),
+    })
+  }
+  return docs
+}
+
+async function loadPrivateKb() {
+  const desktop = join(
+    process.env.HOME || '',
+    'Desktop/nafyoung_kb_private_v1.json',
+  )
+  try {
+    const local = await readFile(desktop, 'utf8')
+    console.log('Loaded private KB from Desktop export')
+    return JSON.parse(local)
+  } catch {
+    // fall through to GitHub private repo
+  }
+
+  if (!githubToken) {
+    console.warn('No GitHub token; cannot fetch private KB from GitHub')
+    return null
+  }
+
+  const url = `https://api.github.com/repos/${owner}/${privateKbRepo}/contents/${privateKbPath}`
+  const res = await fetch(url, { headers: ghHeaders })
+  if (!res.ok) {
+    console.warn(`Private KB fetch failed: ${res.status}`)
+    return null
+  }
+  const meta = await res.json()
+  if (meta.encoding !== 'base64' || !meta.content) {
+    console.warn('Private KB payload missing base64 content')
+    return null
+  }
+  const text = Buffer.from(meta.content.replace(/\n/g, ''), 'base64').toString(
+    'utf8',
+  )
+  console.log(`Loaded private KB from ${owner}/${privateKbRepo}`)
+  return JSON.parse(text)
+}
+
+async function loadPersonaNormalDocs() {
+  const kb = await loadPrivateKb()
+  if (kb) {
+    const persona = exportNormalPersona(kb)
+    await mkdir(dirname(personaCachePath), { recursive: true })
+    await writeFile(
+      personaCachePath,
+      `${JSON.stringify(persona, null, 2)}\n`,
+      'utf8',
+    )
+    console.log(
+      `Wrote ${persona.records.length} normal persona records → ${personaCachePath}`,
+    )
+    return docsFromPersonaNormal(persona)
+  }
+
+  try {
+    const cached = JSON.parse(await readFile(personaCachePath, 'utf8'))
+    console.log(
+      `Using cached persona-normal.json (${cached.records?.length || 0} records)`,
+    )
+    return docsFromPersonaNormal(cached)
+  } catch {
+    console.warn('No private KB and no persona-normal cache; skipping persona docs')
+    return []
+  }
+}
+
 function toChunks(docs) {
   const chunks = []
   for (const doc of docs) {
@@ -220,14 +371,25 @@ function toChunks(docs) {
 async function main() {
   console.log('Loading siteContent…')
   const site = await loadSiteContent()
+  console.log('Loading persona normal whitelist…')
+  const personaDocs = await loadPersonaNormalDocs()
   console.log('Fetching public GitHub repos…')
-  const docs = [...docsFromSite(site), ...(await docsFromGithub())]
+  const docs = [
+    ...docsFromSite(site),
+    ...personaDocs,
+    ...(await docsFromGithub()),
+  ]
   const chunks = toChunks(docs)
   const payload = {
-    version: 1,
+    version: 2,
     builtAt: new Date().toISOString(),
     owner,
     chunkCount: chunks.length,
+    sources: {
+      site: true,
+      persona_normal: personaDocs.length > 0,
+      github_public: true,
+    },
     chunks,
   }
   await mkdir(dirname(outPath), { recursive: true })
