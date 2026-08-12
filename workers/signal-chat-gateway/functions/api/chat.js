@@ -188,24 +188,33 @@ function buildMessages(question, chunks, history) {
   const context = chunks
     .map(
       (c, i) =>
-        `[#${i + 1}] ${c.title}\n来源: ${c.url}\n${c.text.slice(0, 900)}`,
+        `「${c.title}」\n${c.text.slice(0, 900)}`,
     )
     .join('\n\n')
 
   const messages = [
     {
       role: 'system',
-      content: `你是邵扬帆（NafYoung）个人站点助手。
+      content: `你是邵扬帆（NafYoung）个人站点上的对话助手，对访客介绍他。
 
-【提问侧】用户怎么问都可以：口语、简称、不完整句子都正常理解，尽量对上资料主题。
+【人称】
+- 访客是「你」；站点主人是「他 / 邵扬帆 / NafYoung」。
+- 不要把访客当成邵扬帆；不要用「你是…用户/你做过…」来描述他。
 
-【知识侧 / 红线】
-1. 只能依据下方「资料」回答；资料没有的事实一律不编、不脑补、不外推。
-2. 资料有的就直接答，不要假装不知道。
-3. 资料不足时，明确说「资料里没有」；可建议邮件联系，不要猜测。
-4. 不要把倾向/推断说成已发生的事实。
-5. 语气自然简洁；优先中文；无关闲聊可短回并拉回他的经历/项目/合作。
-6. 不要输出与资料无关的长篇通用知识。`,
+【提问】口语、挑衅、简称都正常接，尽量理解意图。
+
+【知识红线】
+- 只依据资料陈述；没有就说「资料里没有」。
+- 禁止编造、禁止把自我定位/理念升级成「胜任某岗位」这类强结论。
+- 可以罗列资料里的具体做法与项目，但不要替他做面试式盖章评价。
+- 有边界就说边界（例如偏运营/产品与工具实践，不等于算法研究），前提是资料支持或至少不要夸大。
+
+【表达】
+- 短、像人说话：优先 3～6 句或少量要点，不要长篇编号小作文。
+- 不要使用「资料#1」「根据资料#N」这类写法；来源由界面单独展示。
+- 不要套话收尾（如「这些共同构成了…基础」）。
+- 硬事实优先于口号/理念；一条落地项目强过三条空泛态度。
+- 默认中文。`,
     },
   ]
 
@@ -224,7 +233,7 @@ function buildMessages(question, chunks, history) {
 
   messages.push({
     role: 'user',
-    content: `资料（唯一事实来源）：\n${context || '（暂无检索结果）'}\n\n用户问题：${question}\n\n请只根据资料作答。`,
+    content: `资料（唯一事实来源，勿在回答里写编号引用）：\n${context || '（暂无检索结果）'}\n\n访客问题：${question}\n\n用对他的第三人称短答；只说资料里有的。`,
   })
 
   return messages
@@ -288,8 +297,8 @@ export async function onRequest(context) {
       },
       body: JSON.stringify({
         model: 'deepseek-chat',
-        temperature: 0.2,
-        max_tokens: 700,
+        temperature: 0.15,
+        max_tokens: 420,
         messages,
       }),
     })
@@ -301,19 +310,39 @@ export async function onRequest(context) {
     }
 
     const data = await llmRes.json()
-    const answer =
+    let answer =
       data?.choices?.[0]?.message?.content?.trim() ||
       '暂时没有生成有效回复，请稍后再试。'
+    // Soft cleanup if the model still leaks internal citation markers.
+    answer = answer
+      .replace(/根据资料\s*#?\d+/g, '')
+      .replace(/资料\s*#\s*\d+/g, '')
+      .replace(/[ \t]+\n/g, '\n')
+      .trim()
+
+    // Prefer denser sources in UI: persona/site/project before generic github profile noise.
+    const sourceRank = (c) => {
+      const id = `${c.id} ${c.title} ${c.source}`
+      if (/persona-skill_|persona-project_|site-project-|skill_ai|project_/i.test(id)) return 0
+      if (/persona-|site-profile|site-edu|education/i.test(id)) return 1
+      if (/contact|workflow/i.test(id)) return 2
+      if (/github profile|gh-profile|gh-readme/i.test(id)) return 4
+      return 3
+    }
+    const sources = [...chunks]
+      .sort((a, b) => sourceRank(a) - sourceRank(b))
+      .slice(0, 4)
+      .map((c) => ({
+        id: c.id,
+        title: c.title,
+        url: c.url,
+        source: c.source,
+      }))
 
     return json(
       {
         answer,
-        sources: chunks.map((c) => ({
-          id: c.id,
-          title: c.title,
-          url: c.url,
-          source: c.source,
-        })),
+        sources,
       },
       200,
       headers,
