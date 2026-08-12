@@ -1,7 +1,6 @@
-name = "signal-chat"
-main = "src/index.js"
+name = "nafyoung-chat"
 compatibility_date = "2026-08-01"
-workers_dev = true
+pages_build_output_dir = "public"
 
 [vars]
 INDEX_URL = "https://nafyoung.github.io/rag/index.json"

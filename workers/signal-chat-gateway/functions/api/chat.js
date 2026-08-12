@@ -1,6 +1,6 @@
 /**
- * Cloudflare Worker: retrieve against public index + DeepSeek polish.
- * Secret: DEEPSEEK_API_KEY
+ * Signal Lab chat API on Cloudflare Pages (*.pages.dev).
+ * Secret: DEEPSEEK_API_KEY (Pages project secret)
  * Optional vars: INDEX_URL, ALLOWED_ORIGINS
  */
 
@@ -127,97 +127,96 @@ function buildMessages(question, chunks, history) {
   return messages
 }
 
-export default {
-  async fetch(request, env) {
-    const allowed = String(
-      env.ALLOWED_ORIGINS ||
-        'https://nafyoung.github.io,http://localhost:5173,http://127.0.0.1:5173',
+export async function onRequest(context) {
+  const { request, env } = context
+  const allowed = String(
+    env.ALLOWED_ORIGINS ||
+      'https://nafyoung.github.io,http://localhost:5173,http://127.0.0.1:5173,http://localhost:4173,http://127.0.0.1:4173',
+  )
+    .split(',')
+    .map((s) => s.trim())
+    .filter(Boolean)
+  const origin = request.headers.get('Origin') || ''
+  const headers = corsHeaders(origin, allowed)
+
+  if (request.method === 'OPTIONS') {
+    return new Response(null, { status: 204, headers })
+  }
+
+  if (request.method !== 'POST') {
+    return json({ error: 'Method not allowed' }, 405, headers)
+  }
+
+  if (!env.DEEPSEEK_API_KEY) {
+    return json({ error: 'Server misconfigured' }, 500, headers)
+  }
+
+  let body
+  try {
+    body = await request.json()
+  } catch {
+    return json({ error: 'Invalid JSON' }, 400, headers)
+  }
+
+  const question = String(body?.question || '').trim()
+  if (!question || question.length > 1000) {
+    return json({ error: 'Invalid question' }, 400, headers)
+  }
+
+  const history = Array.isArray(body?.history) ? body.history.slice(-6) : []
+
+  try {
+    const indexUrl = env.INDEX_URL || DEFAULT_INDEX
+    const indexRes = await fetch(indexUrl, {
+      cf: { cacheTtl: 300, cacheEverything: true },
+    })
+    if (!indexRes.ok) {
+      return json({ error: 'Index unavailable' }, 502, headers)
+    }
+    const index = await indexRes.json()
+    const chunks = retrieve(index.chunks || [], question, 5)
+    const messages = buildMessages(question, chunks, history)
+
+    const llmRes = await fetch(DEEPSEEK_URL, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${env.DEEPSEEK_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        model: 'deepseek-chat',
+        temperature: 0.4,
+        max_tokens: 700,
+        messages,
+      }),
+    })
+
+    if (!llmRes.ok) {
+      const errText = await llmRes.text()
+      console.error('DeepSeek error', llmRes.status, errText.slice(0, 300))
+      return json({ error: 'Upstream model error' }, 502, headers)
+    }
+
+    const data = await llmRes.json()
+    const answer =
+      data?.choices?.[0]?.message?.content?.trim() ||
+      '暂时没有生成有效回复，请稍后再试。'
+
+    return json(
+      {
+        answer,
+        sources: chunks.map((c) => ({
+          id: c.id,
+          title: c.title,
+          url: c.url,
+          source: c.source,
+        })),
+      },
+      200,
+      headers,
     )
-      .split(',')
-      .map((s) => s.trim())
-      .filter(Boolean)
-    const origin = request.headers.get('Origin') || ''
-    const headers = corsHeaders(origin, allowed)
-
-    if (request.method === 'OPTIONS') {
-      return new Response(null, { status: 204, headers })
-    }
-
-    if (request.method !== 'POST') {
-      return json({ error: 'Method not allowed' }, 405, headers)
-    }
-
-    if (!env.DEEPSEEK_API_KEY) {
-      return json({ error: 'Server misconfigured' }, 500, headers)
-    }
-
-    let body
-    try {
-      body = await request.json()
-    } catch {
-      return json({ error: 'Invalid JSON' }, 400, headers)
-    }
-
-    const question = String(body?.question || '').trim()
-    if (!question || question.length > 1000) {
-      return json({ error: 'Invalid question' }, 400, headers)
-    }
-
-    const history = Array.isArray(body?.history) ? body.history.slice(-6) : []
-
-    try {
-      const indexUrl = env.INDEX_URL || DEFAULT_INDEX
-      const indexRes = await fetch(indexUrl, {
-        cf: { cacheTtl: 300, cacheEverything: true },
-      })
-      if (!indexRes.ok) {
-        return json({ error: 'Index unavailable' }, 502, headers)
-      }
-      const index = await indexRes.json()
-      const chunks = retrieve(index.chunks || [], question, 5)
-      const messages = buildMessages(question, chunks, history)
-
-      const llmRes = await fetch(DEEPSEEK_URL, {
-        method: 'POST',
-        headers: {
-          Authorization: `Bearer ${env.DEEPSEEK_API_KEY}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          model: 'deepseek-chat',
-          temperature: 0.4,
-          max_tokens: 700,
-          messages,
-        }),
-      })
-
-      if (!llmRes.ok) {
-        const errText = await llmRes.text()
-        console.error('DeepSeek error', llmRes.status, errText.slice(0, 300))
-        return json({ error: 'Upstream model error' }, 502, headers)
-      }
-
-      const data = await llmRes.json()
-      const answer =
-        data?.choices?.[0]?.message?.content?.trim() ||
-        '暂时没有生成有效回复，请稍后再试。'
-
-      return json(
-        {
-          answer,
-          sources: chunks.map((c) => ({
-            id: c.id,
-            title: c.title,
-            url: c.url,
-            source: c.source,
-          })),
-        },
-        200,
-        headers,
-      )
-    } catch (err) {
-      console.error(err)
-      return json({ error: 'Chat failed' }, 500, headers)
-    }
-  },
+  } catch (err) {
+    console.error(err)
+    return json({ error: 'Chat failed' }, 500, headers)
+  }
 }

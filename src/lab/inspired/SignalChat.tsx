@@ -15,9 +15,10 @@ type ChatMessage = {
   sources?: ChatSource[]
 }
 
+// Prefer pages.dev gateway: *.workers.dev is often unreachable in mainland CN.
 const CHAT_URL =
   import.meta.env.VITE_SIGNAL_CHAT_URL?.trim() ||
-  'https://signal-chat.nafyoung.workers.dev'
+  'https://nafyoung-chat.pages.dev/api/chat'
 
 function uid() {
   return `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`
@@ -67,7 +68,11 @@ export function SignalChat() {
       })
       const data = await res.json().catch(() => ({}))
       if (!res.ok) {
-        throw new Error(data?.error || `请求失败（${res.status}）`)
+        const raw = String(data?.error || `请求失败（${res.status}）`)
+        if (raw === 'Server misconfigured') {
+          throw new Error('聊天服务密钥未配置，请稍后重试。')
+        }
+        throw new Error(raw)
       }
 
       setMessages((prev) => [
