@@ -166,6 +166,8 @@ html.has-signal-cursor * {
 .signal-fallback-title {
   display: grid;
   place-items: center;
+  /* Keep visual center aligned with .signal-halo (top: 28%) */
+  padding-bottom: 44%;
   font-family: var(--display);
   font-size: clamp(48px, 12vw, 96px);
   font-weight: 700;
@@ -175,7 +177,7 @@ html.has-signal-cursor * {
 .signal-halo {
   position: absolute;
   left: 50%;
-  top: 42%;
+  top: 28%;
   z-index: 1;
   width: min(320px, 48vw);
   height: min(320px, 48vw);
@@ -206,7 +208,7 @@ html.has-signal-cursor * {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(80% 70% at 50% 45%, transparent 30%, rgba(0, 0, 0, 0.55) 100%);
+    radial-gradient(80% 70% at 50% 30%, transparent 30%, rgba(0, 0, 0, 0.55) 100%);
   pointer-events: none;
 }
 
