@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, type FormEvent } from 'react'
 import { mountCrtScene } from '../lab/inspired/crtScene'
+import { SignalCursor } from '../lab/inspired/SignalCursor'
 import { siteContent } from '../data/siteContent'
 
 export function InspiredLabPage() {
@@ -45,6 +46,7 @@ export function InspiredLabPage() {
 
   return (
     <div className="signal-page">
+      <SignalCursor />
       <header className="signal-nav">
         <a className="signal-brand" href="/">
           <span className="signal-mark" aria-hidden="true" />
