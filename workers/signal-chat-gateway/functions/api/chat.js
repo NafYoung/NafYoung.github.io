@@ -26,8 +26,32 @@ function tokenize(input) {
   return tokens
 }
 
+function expandQuery(query) {
+  const q = String(query || '')
+  const extras = []
+  if (/学历|学校|毕业|本科|硕士|读研|就读|哪所|什么大学|教育/.test(q)) {
+    extras.push(
+      '学历',
+      '学校',
+      '毕业',
+      '毕业于',
+      '本科',
+      '硕士',
+      '大学',
+      '就读',
+      '教育背景',
+      '上海大学',
+      '上海海洋大学',
+    )
+  }
+  if (/项目|作品|做过|开发/.test(q)) {
+    extras.push('项目', '作品', 'GitHub')
+  }
+  return `${q} ${extras.join(' ')}`.trim()
+}
+
 function retrieve(chunks, query, topK = 5) {
-  const queryTerms = tokenize(query)
+  const queryTerms = tokenize(expandQuery(query))
   if (!queryTerms.length) return chunks.slice(0, topK)
   const docs = chunks.map((c) => ({
     chunk: c,
@@ -41,7 +65,7 @@ function retrieve(chunks, query, topK = 5) {
   }
   const k1 = 1.2
   const b = 0.75
-  return docs
+  let ranked = docs
     .map((d) => {
       const tf = new Map()
       for (const t of d.tokens) tf.set(t, (tf.get(t) || 0) + 1)
@@ -58,8 +82,24 @@ function retrieve(chunks, query, topK = 5) {
     })
     .filter((x) => x.score > 0)
     .sort((a, b) => b.score - a.score)
-    .slice(0, topK)
-    .map((x) => x.chunk)
+
+  // Education fallback: if user asks about school/degree but BM25 is thin, force edu chunks in.
+  if (/学历|学校|毕业|本科|硕士|读研|就读|哪所|什么大学|教育/.test(String(query || ''))) {
+    const edu = chunks.filter(
+      (c) =>
+        /edu|教育|大学|本科|硕士|学历|毕业|就读/.test(
+          `${c.id}\n${c.title}\n${c.text}`,
+        ),
+    )
+    const seen = new Set(ranked.map((x) => x.chunk.id))
+    for (const c of edu) {
+      if (seen.has(c.id)) continue
+      ranked.push({ chunk: c, score: 0.01 })
+      seen.add(c.id)
+    }
+  }
+
+  return ranked.slice(0, topK).map((x) => x.chunk)
 }
 
 function corsHeaders(origin, allowed) {
@@ -95,14 +135,15 @@ function buildMessages(question, chunks, history) {
   const messages = [
     {
       role: 'system',
-      content: `你是邵扬帆（NafYoung）个人站点 Signal Lab 上的助手。
+      content: `你是邵扬帆（NafYoung）个人站点上的助手。
 只用提供的资料回答关于他的经历、项目、技能与合作意向的问题。
 规则：
 1. 不要编造资料里没有的事实；不确定就明确说不知道，并建议邮件联系。
 2. 语气自然、简洁；可用「他/邵扬帆」指代，不要替他做无法核实的承诺。
 3. 优先中文回答；用户用英文提问时可英文回答。
 4. 若问题与他无关，礼貌拒绝并拉回个人相关话题。
-5. 回答简洁，必要时可给一个可继续追问的方向。`,
+5. 回答简洁；涉及学历/学校时，把资料里的本科与硕士信息一并说清（若资料有）。
+6. 资料里已有明确事实时，直接回答，不要说「没有相关信息」。`,
     },
   ]
 
@@ -174,7 +215,7 @@ export async function onRequest(context) {
       return json({ error: 'Index unavailable' }, 502, headers)
     }
     const index = await indexRes.json()
-    const chunks = retrieve(index.chunks || [], question, 5)
+      const chunks = retrieve(index.chunks || [], question, 8)
     const messages = buildMessages(question, chunks, history)
 
     const llmRes = await fetch(DEEPSEEK_URL, {

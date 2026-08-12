@@ -112,7 +112,13 @@ function docsFromSite(site) {
       title: `${item.title} · ${item.subtitle}`,
       source: 'site',
       url: 'https://nafyoung.github.io/#education',
-      text: [item.period, item.title, item.subtitle, item.description]
+      text: [
+        item.period,
+        item.title,
+        item.subtitle,
+        item.description,
+        '教育背景 学历 学校 毕业 就读 本科 硕士 大学',
+      ]
         .filter(Boolean)
         .join('\n'),
     })
@@ -262,6 +268,7 @@ function docsFromPersonaNormal(persona) {
         idPub.public_name,
         idPub.current_role,
         idPub.primary_city,
+        '教育背景 学历 学校 硕士 就读 大学',
       ]
         .filter(Boolean)
         .join('\n'),
@@ -269,6 +276,16 @@ function docsFromPersonaNormal(persona) {
   }
 
   for (const r of persona.records || []) {
+    const time =
+      r.time_scope == null
+        ? ''
+        : typeof r.time_scope === 'string'
+          ? r.time_scope
+          : JSON.stringify(r.time_scope)
+    const eduBoost =
+      r.domain === 'education'
+        ? '教育背景 学历 学校 毕业 就读 本科 硕士 大学 毕业于'
+        : ''
     docs.push({
       id: `persona-${r.id}`,
       title: `${r.domain || 'persona'} · ${r.id}`,
@@ -277,8 +294,9 @@ function docsFromPersonaNormal(persona) {
       text: [
         r.statement,
         r.type ? `类型：${r.type}` : '',
-        r.time_scope ? `时间：${r.time_scope}` : '',
+        time ? `时间：${time}` : '',
         Array.isArray(r.tags) && r.tags.length ? `标签：${r.tags.join('、')}` : '',
+        eduBoost,
       ]
         .filter(Boolean)
         .join('\n'),

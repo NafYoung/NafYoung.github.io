@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "builtAt": "2026-08-12T07:06:31.307Z",
+  "builtAt": "2026-08-12T07:16:42.566Z",
   "owner": "NafYoung",
   "chunkCount": 135,
   "sources": {
@@ -42,14 +42,14 @@
       "title": "上海大学 · 数字经济｜硕士在读",
       "source": "site",
       "url": "https://nafyoung.github.io/#education",
-      "text": "2025.09 - 2027.06\n上海大学\n数字经济｜硕士在读"
+      "text": "2025.09 - 2027.06\n上海大学\n数字经济｜硕士在读\n教育背景 学历 学校 毕业 就读 本科 硕士 大学"
     },
     {
       "id": "site-edu-上海海洋大学",
       "title": "上海海洋大学 · 市场营销｜本科",
       "source": "site",
       "url": "https://nafyoung.github.io/#education",
-      "text": "2021.09 - 2025.06\n上海海洋大学\n市场营销｜本科"
+      "text": "2021.09 - 2025.06\n上海海洋大学\n市场营销｜本科\n教育背景 学历 学校 毕业 就读 本科 硕士 大学"
     },
     {
       "id": "site-workflow-01",
@@ -84,175 +84,175 @@
       "title": "公开身份",
       "source": "persona",
       "url": "https://nafyoung.github.io/",
-      "text": "邵扬帆\nNafYoung\n上海大学数字经济专业硕士研究生\n上海"
+      "text": "邵扬帆\nNafYoung\n上海大学数字经济专业硕士研究生\n上海\n教育背景 学历 学校 硕士 就读 大学"
     },
     {
       "id": "persona-edu_undergrad_001",
       "title": "education · edu_undergrad_001",
       "source": "persona",
       "url": "https://nafyoung.github.io/inspired/",
-      "text": "本科毕业于上海海洋大学，专业为市场营销。\n类型：fact\n时间：[object Object]\n标签：本科、上海海洋大学、市场营销"
+      "text": "本科毕业于上海海洋大学，专业为市场营销。\n类型：fact\n时间：{\"from\":\"2021\",\"to\":\"2025-06\"}\n标签：本科、上海海洋大学、市场营销\n教育背景 学历 学校 毕业 就读 本科 硕士 大学 毕业于"
     },
     {
       "id": "persona-edu_grad_001",
       "title": "education · edu_grad_001",
       "source": "persona",
       "url": "https://nafyoung.github.io/inspired/",
-      "text": "目前就读上海大学数字经济专业硕士。\n类型：fact\n时间：[object Object]\n标签：硕士、上海大学、数字经济"
+      "text": "目前就读上海大学数字经济专业硕士。\n类型：fact\n时间：{\"from\":\"2025\",\"to\":\"current\"}\n标签：硕士、上海大学、数字经济\n教育背景 学历 学校 毕业 就读 本科 硕士 大学 毕业于"
     },
     {
       "id": "persona-edu_grad_exam_001",
       "title": "education · edu_grad_exam_001",
       "source": "persona",
       "url": "https://nafyoung.github.io/inspired/",
-      "text": "考研初试约360分，专业排名靠前，并成功录取上海大学。\n类型：fact\n时间：[object Object]\n标签：考研、录取、上海大学"
+      "text": "考研初试约360分，专业排名靠前，并成功录取上海大学。\n类型：fact\n时间：{\"from\":\"2025\",\"to\":\"2025\"}\n标签：考研、录取、上海大学\n教育背景 学历 学校 毕业 就读 本科 硕士 大学 毕业于"
     },
     {
       "id": "persona-career_goal_001",
       "title": "career · career_goal_001",
       "source": "persona",
       "url": "https://nafyoung.github.io/inspired/",
-      "text": "希望进入与大模型应用、AI Agent、AI产品或数据分析相关的工作。\n类型：current_goal\n时间：[object Object]\n标签：AI、Agent、AI产品、数据分析、求职"
+      "text": "希望进入与大模型应用、AI Agent、AI产品或数据分析相关的工作。\n类型：current_goal\n时间：{\"from\":\"2026-05\",\"to\":\"current\"}\n标签：AI、Agent、AI产品、数据分析、求职"
     },
     {
       "id": "persona-career_goal_002",
       "title": "career · career_goal_002",
       "source": "persona",
       "url": "https://nafyoung.github.io/inspired/",
-      "text": "相较岗位名称，更重视是否真实接触模型、代码、真实业务、部署和可量化结果。\n类型：preference\n时间：[object Object]\n标签：岗位选择、ownership、部署、真实业务"
+      "text": "相较岗位名称，更重视是否真实接触模型、代码、真实业务、部署和可量化结果。\n类型：preference\n时间：{\"from\":\"2026\",\"to\":\"current\"}\n标签：岗位选择、ownership、部署、真实业务"
     },
     {
       "id": "persona-career_intern_001",
       "title": "career · career_intern_001",
       "source": "persona",
       "url": "https://nafyoung.github.io/inspired/",
-      "text": "2026年在上海一家streetwear/电商企业进行AI办公提效相关实习，涉及飞书迁移、多维表格、自动化和企业流程优化。\n类型：fact\n时间：[object Object]\n标签：实习、AI办公、飞书、自动化"
+      "text": "2026年在上海一家streetwear/电商企业进行AI办公提效相关实习，涉及飞书迁移、多维表格、自动化和企业流程优化。\n类型：fact\n时间：{\"from\":\"2026-06\",\"to\":\"current\"}\n标签：实习、AI办公、飞书、自动化"
     },
     {
       "id": "persona-career_intern_002",
       "title": "career · career_intern_002",
       "source": "persona",
       "url": "https://nafyoung.github.io/inspired/",
-      "text": "对当前实习是否足够接近真正的AI产品/Agent业务保持警惕，并设有较强的止损意识。\n类型：stage_state\n时间：[object Object]\n标签：实习判断、止损、职业路径"
+      "text": "对当前实习是否足够接近真正的AI产品/Agent业务保持警惕，并设有较强的止损意识。\n类型：stage_state\n时间：{\"from\":\"2026-06\",\"to\":\"current\"}\n标签：实习判断、止损、职业路径"
     },
     {
       "id": "persona-skill_python_001",
       "title": "skills · skill_python_001",
       "source": "persona",
       "url": "https://nafyoung.github.io/inspired/",
-      "text": "主要编程语言为Python，使用过pandas、scikit-learn、requests、BeautifulSoup等。\n类型：fact\n时间：[object Object]\n标签：Python、pandas、sklearn"
+      "text": "主要编程语言为Python，使用过pandas、scikit-learn、requests、BeautifulSoup等。\n类型：fact\n时间：{\"from\":\"2024\",\"to\":\"current\"}\n标签：Python、pandas、sklearn"
     },
     {
       "id": "persona-skill_sql_001",
       "title": "skills · skill_sql_001",
       "source": "persona",
       "url": "https://nafyoung.github.io/inspired/",
-      "text": "SQL目前处于基础阶段，偏好通过题目和实际任务学习。\n类型：fact\n时间：[object Object]\n标签：SQL、学习"
+      "text": "SQL目前处于基础阶段，偏好通过题目和实际任务学习。\n类型：fact\n时间：{\"from\":\"2026\",\"to\":\"current\"}\n标签：SQL、学习"
     },
     {
       "id": "persona-skill_git_001",
       "title": "skills · skill_git_001",
       "source": "persona",
       "url": "https://nafyoung.github.io/inspired/",
-      "text": "已开始实际使用Git，但基础命令和工程协作经验仍需补强。\n类型：fact\n时间：[object Object]\n标签：Git、工程能力"
+      "text": "已开始实际使用Git，但基础命令和工程协作经验仍需补强。\n类型：fact\n时间：{\"from\":\"2026\",\"to\":\"current\"}\n标签：Git、工程能力"
     },
     {
       "id": "persona-skill_ai_tools_001",
       "title": "skills · skill_ai_tools_001",
       "source": "persona",
       "url": "https://nafyoung.github.io/inspired/",
-      "text": "是高频、重度AI工具用户，常使用ChatGPT、Codex、Claude Code等辅助学习和开发。\n类型：stable_tendency\n时间：[object Object]\n标签：ChatGPT、Codex、Claude Code、AI Native"
+      "text": "是高频、重度AI工具用户，常使用ChatGPT、Codex、Claude Code等辅助学习和开发。\n类型：stable_tendency\n时间：{\"from\":\"2025\",\"to\":\"current\"}\n标签：ChatGPT、Codex、Claude Code、AI Native"
     },
     {
       "id": "persona-skill_ai_workflow_001",
       "title": "skills · skill_ai_workflow_001",
       "source": "persona",
       "url": "https://nafyoung.github.io/inspired/",
-      "text": "工作方式逐渐转向“定义目标→让Agent执行→Review→Debug→继续拆任务”。\n类型：stable_tendency\n时间：[object Object]\n标签：Agent、AI协作、vibecoding"
+      "text": "工作方式逐渐转向“定义目标→让Agent执行→Review→Debug→继续拆任务”。\n类型：stable_tendency\n时间：{\"from\":\"2026\",\"to\":\"current\"}\n标签：Agent、AI协作、vibecoding"
     },
     {
       "id": "persona-skill_gap_001",
       "title": "skills · skill_gap_001",
       "source": "persona",
       "url": "https://nafyoung.github.io/inspired/",
-      "text": "目前CS基础、后端、数据库、Git、部署和系统设计仍不系统。\n类型：self_assessment\n时间：[object Object]\n标签：短板、CS基础、后端、系统设计"
+      "text": "目前CS基础、后端、数据库、Git、部署和系统设计仍不系统。\n类型：self_assessment\n时间：{\"from\":\"2026\",\"to\":\"current\"}\n标签：短板、CS基础、后端、系统设计"
     },
     {
       "id": "persona-project_agent_001",
       "title": "projects · project_agent_001",
       "source": "persona",
       "url": "https://nafyoung.github.io/inspired/",
-      "text": "正在推进客服Agent项目；经代码审查后更准确定位为“Agent可调用的确定性交易后端”。\n类型：fact\n时间：[object Object]\n标签：客服Agent、Tool Calling、交易后端"
+      "text": "正在推进客服Agent项目；经代码审查后更准确定位为“Agent可调用的确定性交易后端”。\n类型：fact\n时间：{\"from\":\"2026-07\",\"to\":\"current\"}\n标签：客服Agent、Tool Calling、交易后端"
     },
     {
       "id": "persona-project_agent_002",
       "title": "projects · project_agent_002",
       "source": "persona",
       "url": "https://nafyoung.github.io/inspired/",
-      "text": "项目当前重点问题包括确认权威、幂等、跨客户安全和调试接口暴露。\n类型：fact\n时间：[object Object]\n标签：安全、幂等、权限、Agent工程"
+      "text": "项目当前重点问题包括确认权威、幂等、跨客户安全和调试接口暴露。\n类型：fact\n时间：{\"from\":\"2026-07\",\"to\":\"current\"}\n标签：安全、幂等、权限、Agent工程"
     },
     {
       "id": "persona-project_ml_001",
       "title": "projects · project_ml_001",
       "source": "persona",
       "url": "https://nafyoung.github.io/inspired/",
-      "text": "做过AQI预测项目，Random Forest曾取得MAE约10.654、RMSE约13.144、R²约0.399。\n类型：fact\n时间：[object Object]\n标签：AQI、Random Forest、机器学习"
+      "text": "做过AQI预测项目，Random Forest曾取得MAE约10.654、RMSE约13.144、R²约0.399。\n类型：fact\n时间：{\"from\":\"2024\",\"to\":\"2025\"}\n标签：AQI、Random Forest、机器学习"
     },
     {
       "id": "persona-project_finance_001",
       "title": "projects · project_finance_001",
       "source": "persona",
       "url": "https://nafyoung.github.io/inspired/",
-      "text": "做过股票波动率回归与股价预测相关项目，股票波动率回归R²约0.523。\n类型：fact\n时间：[object Object]\n标签：金融数据、回归、股价预测"
+      "text": "做过股票波动率回归与股价预测相关项目，股票波动率回归R²约0.523。\n类型：fact\n时间：{\"from\":\"2024\",\"to\":\"2025\"}\n标签：金融数据、回归、股价预测"
     },
     {
       "id": "persona-research_001",
       "title": "research · research_001",
       "source": "persona",
       "url": "https://nafyoung.github.io/inspired/",
-      "text": "硕士论文和阅读主要处于数字经济、数字文旅、AI与实证经济学的交叉区域。\n类型：fact\n时间：[object Object]\n标签：数字经济、数字文旅、AI、实证"
+      "text": "硕士论文和阅读主要处于数字经济、数字文旅、AI与实证经济学的交叉区域。\n类型：fact\n时间：{\"from\":\"2025\",\"to\":\"current\"}\n标签：数字经济、数字文旅、AI、实证"
     },
     {
       "id": "persona-research_002",
       "title": "research · research_002",
       "source": "persona",
       "url": "https://nafyoung.github.io/inspired/",
-      "text": "论文思路曾从AI影响文旅TFP/空间溢出，转向更强调识别策略、DID、准自然实验和区域异质性。\n类型：stage_state\n时间：[object Object]\n标签：DID、准自然实验、空间异质性"
+      "text": "论文思路曾从AI影响文旅TFP/空间溢出，转向更强调识别策略、DID、准自然实验和区域异质性。\n类型：stage_state\n时间：{\"from\":\"2026-04\",\"to\":\"current\"}\n标签：DID、准自然实验、空间异质性"
     },
     {
       "id": "persona-learning_001",
       "title": "learning_preferences · learning_001",
       "source": "persona",
       "url": "https://nafyoung.github.io/inspired/",
-      "text": "技术和数学学习偏好“先直觉→再术语→再动手→再反馈”。\n类型：stable_preference\n时间：[object Object]\n标签：学习偏好、直觉、动手"
+      "text": "技术和数学学习偏好“先直觉→再术语→再动手→再反馈”。\n类型：stable_preference\n时间：{\"from\":\"2025\",\"to\":\"current\"}\n标签：学习偏好、直觉、动手"
     },
     {
       "id": "persona-learning_002",
       "title": "learning_preferences · learning_002",
       "source": "persona",
       "url": "https://nafyoung.github.io/inspired/",
-      "text": "不喜欢一开始堆定义、背API或只给结论，更重视理解一个概念在解决什么问题。\n类型：stable_preference\n时间：[object Object]\n标签：解释方式、概念理解"
+      "text": "不喜欢一开始堆定义、背API或只给结论，更重视理解一个概念在解决什么问题。\n类型：stable_preference\n时间：{\"from\":\"2025\",\"to\":\"current\"}\n标签：解释方式、概念理解"
     },
     {
       "id": "persona-english_001",
       "title": "language · english_001",
       "source": "persona",
       "url": "https://nafyoung.github.io/inspired/",
-      "text": "CET-6约500分，阅读和书面表达强于实时口语。\n类型：fact\n时间：[object Object]\n标签：英语、CET-6、口语"
+      "text": "CET-6约500分，阅读和书面表达强于实时口语。\n类型：fact\n时间：{\"from\":\"2025\",\"to\":\"current\"}\n标签：英语、CET-6、口语"
     },
     {
       "id": "persona-english_002",
       "title": "language · english_002",
       "source": "persona",
       "url": "https://nafyoung.github.io/inspired/",
-      "text": "英语口语目标是natural and clear，重点改善Chinglish、明显语法错误和影响理解的问题。\n类型：current_goal\n时间：[object Object]\n标签：英语口语、natural and clear"
+      "text": "英语口语目标是natural and clear，重点改善Chinglish、明显语法错误和影响理解的问题。\n类型：current_goal\n时间：{\"from\":\"2026-07\",\"to\":\"current\"}\n标签：英语口语、natural and clear"
     },
     {
       "id": "persona-english_003",
       "title": "language · english_003",
       "source": "persona",
       "url": "https://nafyoung.github.io/inspired/",
-      "text": "英语口语练习不希望把自然口语中的省略、filler和重复全部按书面英语纠错。\n类型：preference\n时间：[object Object]\n标签：口语纠错、自然英语"
+      "text": "英语口语练习不希望把自然口语中的省略、filler和重复全部按书面英语纠错。\n类型：preference\n时间：{\"from\":\"2026-08\",\"to\":\"current\"}\n标签：口语纠错、自然英语"
     },
     {
       "id": "gh-profile",
