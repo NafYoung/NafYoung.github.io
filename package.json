@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "vite",
     "build": "npm run rag:index && tsc -b && vite build",
-    "build:offline": "node ./scripts/build-offline.mjs",
     "rag:index": "node ./scripts/build-rag-index.mjs",
     "lint": "eslint .",
     "preview": "vite preview"

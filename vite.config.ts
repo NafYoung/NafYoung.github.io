@@ -2,8 +2,8 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'node:path'
 
-export default defineConfig(({ mode }) => ({
-  base: mode === 'offline' ? './' : '/',
+export default defineConfig({
+  base: '/',
   plugins: [react()],
   build: {
     rollupOptions: {
@@ -13,4 +13,4 @@ export default defineConfig(({ mode }) => ({
       },
     },
   },
-}))
+})
