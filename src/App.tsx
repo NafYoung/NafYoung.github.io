@@ -47,9 +47,14 @@ function App() {
         <span>
           {siteContent.profile.displayName} / {siteContent.profile.englishName}
         </span>
-        <a className="footer-lab-link" href="/inspired/">
-          Signal Lab
-        </a>
+        <span className="footer-labs">
+          <a className="footer-lab-link" href="/inspired/">
+            Signal Lab
+          </a>
+          <a className="footer-lab-link" href="/kiln/">
+            Kiln
+          </a>
+        </span>
         <span>Video · WebGL Glitch · Lenis · IO</span>
       </footer>
     </div>

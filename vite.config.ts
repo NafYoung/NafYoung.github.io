@@ -10,6 +10,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         inspired: resolve(__dirname, 'inspired/index.html'),
+        kiln: resolve(__dirname, 'kiln/index.html'),
       },
     },
   },
