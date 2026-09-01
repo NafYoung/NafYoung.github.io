@@ -3,7 +3,7 @@ const TRACKS = [
     id: 'main',
     path: 'M 92 168 C 148 168 168 230 214 286 C 268 352 348 392 452 404 C 572 418 676 360 776 328 C 868 300 956 332 1048 392',
     color: '#e07a5f',
-    r: 16,
+    r: 22,
     dur: '9.2s',
     delay: '0s',
     rest: { x: 776, y: 328 },
@@ -12,7 +12,7 @@ const TRACKS = [
     id: 'shelf',
     path: 'M 70 96 H 310 C 342 96 356 128 336 154 C 300 198 244 214 196 206',
     color: '#3d5a80',
-    r: 13,
+    r: 18,
     dur: '7.4s',
     delay: '-1.6s',
     rest: { x: 310, y: 96 },
@@ -21,7 +21,7 @@ const TRACKS = [
     id: 'loop',
     path: 'M 628 214 C 704 146 812 168 828 254 C 844 344 748 382 684 330 C 636 292 648 230 712 214 C 768 202 804 236 804 236',
     color: '#e9c46a',
-    r: 15,
+    r: 21,
     dur: '8.6s',
     delay: '-3.1s',
     rest: { x: 748, y: 250 },
@@ -30,7 +30,7 @@ const TRACKS = [
     id: 'hill',
     path: 'M 40 428 Q 210 318 390 428 T 760 428 T 1088 446',
     color: '#2a9d8f',
-    r: 18,
+    r: 24,
     dur: '11s',
     delay: '-2.4s',
     rest: { x: 390, y: 428 },
@@ -39,7 +39,7 @@ const TRACKS = [
     id: 'drop',
     path: 'M 980 86 C 980 148 940 188 880 206 C 820 224 790 268 818 318 C 852 376 930 390 1008 364',
     color: '#f4a261',
-    r: 14,
+    r: 19,
     dur: '6.8s',
     delay: '-0.8s',
     rest: { x: 880, y: 206 },
@@ -48,7 +48,7 @@ const TRACKS = [
     id: 'bowl',
     path: 'M 430 86 C 470 126 486 186 470 240 C 452 300 390 332 338 314 C 286 296 274 236 304 196',
     color: '#81b29a',
-    r: 12,
+    r: 17,
     dur: '7.8s',
     delay: '-4.2s',
     rest: { x: 470, y: 240 },
@@ -167,7 +167,8 @@ export function HeroContraption() {
                 r={track.r}
                 fill={track.color}
                 stroke="#fff6ea"
-                strokeWidth="3"
+                strokeWidth="4"
+                style={{ filter: 'drop-shadow(0 4px 3px rgba(28, 22, 18, 0.28))' }}
               />
             ) : (
               <circle
@@ -175,7 +176,8 @@ export function HeroContraption() {
                 r={track.r}
                 fill={track.color}
                 stroke="#fff6ea"
-                strokeWidth="3"
+                strokeWidth="4"
+                style={{ filter: 'drop-shadow(0 4px 3px rgba(28, 22, 18, 0.28))' }}
               >
                 <animateMotion
                   dur={track.dur}
