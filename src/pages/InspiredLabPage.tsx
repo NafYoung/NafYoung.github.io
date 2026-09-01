@@ -45,7 +45,6 @@ export function InspiredLabPage() {
         </a>
         <nav aria-label="Lab navigation">
           <a href="/">Home</a>
-          <a href="/kiln/">Kiln</a>
           <a href="/#projects">Projects</a>
           <a href={siteContent.contact.githubUrl} rel="noreferrer" target="_blank">
             GitHub
