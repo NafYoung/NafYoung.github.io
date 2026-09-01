@@ -798,6 +798,11 @@
   font-size: 13px;
 }
 
+.footer-labs {
+  display: flex;
+  gap: 16px;
+}
+
 .footer-lab-link {
   color: rgba(125, 211, 252, 0.78);
   text-decoration: underline;
